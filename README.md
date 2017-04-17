@@ -1,1 +1,3 @@
-# CMPE280-Project
+# CMPE280
+
+Sparta Scoop
