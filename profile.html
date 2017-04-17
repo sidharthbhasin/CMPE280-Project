@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PortalB</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+    <div class="row loginrow">
+    <div class="container">
+    
+    <div class="col-md-3 col-xs-6 logo">
+    <img src="img/logo.svg">
+    </div>
+    
+    <div class="col-xs-6 text-right phonenv">
+    <div class="col-xs-4 col-xs-offset-5 prp"><img src="img/guy2.svg"></div>
+    <div class="col-xs-2 menu"><img src="img/arrow.svg"></div>
+    </div>
+    
+   
+    </div>
+    
+    </div>
+    
+    <!--phonenav-->
+    <div class="row phnav text-center">
+    <ul>
+    <li><a href="#">TIMELINE</a></li>
+    <li><a href="profile.html"  class="active">EDIT PROFILE</a></li>
+    <li><a href="#">ON CAMPUS JOBS</a></li>
+    <li><a href="marketplace.html">MARKET PLACE</a></li>
+    <li><a href="#">LOG OUT</a></li>
+    </ul>
+    </div>
+    <!--phonenavend-->
+    
+    
+    
+    <div class="container mar100 profile">
+    <div class="row text-center">
+    <img src="img/guy1.svg">
+    </div>
+    
+    <div class="row text-center mar20">
+    <p style="font-size:13px;letter-spacing:1px;color:#62C192;">
+    Complete Your Profile Or <strong><a href="#" style="color:#286345;">Skip This Step</a></strong> </p></div>
+    
+    <form class="mar30">
+    <div class="row">
+   
+   
+    <div class="col-md-offset-4 col-md-2">
+    <input type="text" name="firstname" class="inp2" placeholder="First Name">
+    </div>
+    <div class="col-md-2 padleft0 resmar15">
+    <input type="text" name="lastname" class="inp2" placeholder="Last Name">
+    </div>
+    
+    </div>
+    
+    <div class="row">
+    <div class="col-md-offset-4 col-md-4 mar15">
+    <input type="text" name="jobp" placeholder="Job Profile" class="inp2">
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-offset-4 col-md-4 mar15">
+    <input type="date" name="dob" placeholder="Job Profile" class="inp2">
+    </div>
+    </div>
+    
+    <div class="row text-center mar20">
+    <input type="submit" class="btn2" value="SAVE">
+    </div>
+    
+    
+    </form>
+    
+    
+    
+    
+    
+    
+    </div>
+  </div>
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+  $(document).ready(function(){
+	  $('.menu').click(function(){
+		  $('.phnav').slideToggle();
+		  })
+	  
+	  })
+  
+  </script>
+  </body>
+</html>
