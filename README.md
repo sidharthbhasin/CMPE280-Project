@@ -1,4 +1,7 @@
 # CMPE280
 
-Amit pandey
 Sparta Scoop
+
+All four write names here to confirm
+Amit pandey
+Sidharth Bhasin
