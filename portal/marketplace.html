@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PortalB</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/market.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+    
+        <!--logorow-->
+        <div class="row loginrow">
+            <div class="container">
+                <div class="col-md-3 col-xs-6 logo">
+                    <img src="img/logo.svg">
+                </div>
+    
+                <div class="col-xs-6 text-right phonenv">
+                    <div class="col-xs-4 col-xs-offset-5 prp">
+                        <img src="img/guy2.svg">
+                    </div>
+
+                    <div class="col-xs-2 menu">
+                        <img src="img/arrow.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--phonenav-->
+        <div class="row phnav text-center">
+            <ul>
+                <li><p>Sidharth Bhasin</p></li>
+                <li><a href="#">TIMELINE</a></li>
+                <li><a href="profile.html">EDIT PROFILE</a></li>
+                <li><a href="#">ON CAMPUS JOBS</a></li>
+                <li><a href="marketplace.html" class="active">MARKET PLACE</a></li>
+                <li><a href="#">LOG OUT</a></li>
+            </ul>
+        </div>
+        <!--phonenavend-->
+        <!--logorowend-->
+        <!--sidebar-->
+    
+        <div class="col-md-2 mar40 sidebar">
+            <div class="row text-center">
+                <img src="img/guy2.svg">
+            </div>
+    
+            <div class="row text-center mar20">
+                <p class="dname">Sidharth Bhasin</p>
+            </div>
+        
+            <div class="row text-center nvv">
+                <ul>
+                    <li><a href="#">TIMELINE</a></li>
+                    <li><a href="#">EDIT PROFILE</a></li>
+                    <li><a href="#">ON CAMPUS JOBS</a></li>
+                    <li><a href="#" class="active">MARKET PLACE</a></li>
+                    <li><a href="#">LOG OUT</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!--sidebar end-->
+        <!--marketplace-->
+    
+        <div class="col-md-7 mar40 marleft2">
+            <div class="row head">
+                <h2>MARKETPLACE</h2>
+            </div>
+    
+            <div class="row mar30">
+                <div class="col-md-2 nopad product">
+                    <img src="img/green.svg">
+                </div>
+    
+                <div class="col-md-7 pddeets">
+                    <h3>ITEM FOR SALE</h3>
+                    <p class="mar10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <a href="#" class="btn3">BUY</a> <a href="#" class="btn3">BUY</a>
+                </div>
+            </div>
+    
+            <div class="row mar30">
+                <div class="col-md-2 nopad product">
+                    <img src="img/green.svg">
+                </div>
+    
+                <div class="col-md-7 pddeets">
+                    <h3>ITEM FOR SALE</h3>
+                    <p class="mar10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <a href="#" class="btn3">BUY</a> <a href="#" class="btn3">BUY</a>
+                </div>
+            </div>    
+        </div>
+        <!--marketplace end-->   
+
+        <div class="col-md-2 mar40 trends">
+            
+
+        </div>  
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.menu').click(function(){
+            $('.phnav').slideToggle();
+            })
+        })
+    </script>
+  </body>
+</html>
