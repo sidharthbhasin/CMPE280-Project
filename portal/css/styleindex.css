@@ -236,6 +236,10 @@ p{
     color:#fff;
 }
 
+.sup{
+    margin-top: 100px;
+}
+
 .phonenv, .phnav{
     display:none;
 }
@@ -245,6 +249,19 @@ p{
 }
 
 @media(max-width:991px){
+
+    .newclass{
+        float: right;
+        margin-top: 490px;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    
+    .sup{
+        margin-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .x{
         margin-top: 20px;

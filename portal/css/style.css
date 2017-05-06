@@ -176,6 +176,8 @@ p{
     letter-spacing:1px;
 }
 
+
+
 .name span{
     color:#A9A8A8;
     font-size:10px;
@@ -263,6 +265,11 @@ p{
     }
     .resmar10{
         margin-top:10px;
+    }
+
+    .profile{
+        margin-top: 20px;
+        
     }
     .resmar15{
         margin-top:15px;
