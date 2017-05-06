@@ -9,25 +9,64 @@
 
     <link href="css/feed.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link href="css/dragDrop.css" rel="stylesheet" type="text/css">
 </head>
   
-<body>    
+<body style="color: black">    
     <div class="container-fluid">
+        
+
         <div class="row loginrow">
             <div class="container">
-        
+               
                 <div class="col-md-3 col-xs-6 logo">
-                    <img src="img/logo.svg">
+                    <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
                 </div>
         
                 <div class="col-xs-6 text-right phonenv">
                     <div class="col-xs-4 col-xs-offset-5 prp">
                         <img src="img/guy2.svg">
                     </div>
-                    <div class="col-xs-2 menu">
+                    <div class="col-xs-2  menu">
                         <img src="img/arrow.svg">
                     </div>
                 </div>
+
+               <div class="col-md-9 text-right ">
+
+                  <form action="/hms/accommodations" method="GET"> 
+                      <div class="row">
+                        <div class="col-xs-6 col-md-4">
+                          <div class="input-group">
+                               <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+                               <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                               </div>
+                         </div>
+                        </div>
+                        <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
+                      <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">privacy</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </div>
+
+                      </div>
+                   </form> 
+                </div>
+
+
             </div>
         </div>
 
@@ -75,10 +114,45 @@
                 <div class="col-md-7 marleft2 mar50 newclass">
                 
                     <!--status-->
-                    <div class="row">
-                        <textarea class="status" placeholder="Say Something...."></textarea><br>
-                        <input type="submit" class="btn2 mar20"> <input type="submit" class="btn2 mar20" value="share an image">
+                    <div class="row" style=" border-bottom:1px solid #999;">
+                        <div class="row" >
+                            <textarea class="status"   style="color: black" placeholder="Say Something...."></textarea>
+                        </div>
+                        <div class="row">
+                         Drag and drop you image here
+                            <article>
+                              <div id="holderSection"> 
+
+                                <div id="innerHolder" style="color: black;padding: 5px; float: left;width: 20%;">
+                                        <img src="" class="imgSize" id="uploadImg">
+                                </div> 
+                                <div id="innerHolder1" style="color: black;padding: 5px; float: left;width: 20%;">
+                                        <img src="" class="imgSize" id="uploadImg">
+                                </div> 
+                                <div id="innerHolder2" style="color: black;padding: 5px; float: left;width: 20%;">
+                                        <img src="" class="imgSize" id="uploadImg">
+                                </div> 
+                                <div id="innerHolder3" style="color: black;padding: 5px; float: left;width: 20%;">
+                                        <img src="" class="imgSize" id="uploadImg">
+                                </div> 
+                                <div id="innerHolder4" style="color: black;padding: 5px; float: left;width: 20%;">
+                                        <img src="" class="imgSize" id="uploadImg">
+                                </div> 
+                              </div>      
+                            </article>
+                        </div>
+
                     </div>
+                      <div class="row">
+
+                        <input type="submit" class="btn2 mar20" >
+
+                            <div class="fileUpload btn btn-primary">
+                                <span>Upload Image</span>
+                                <input type="file" onchange="previewFile()" class="upload" value="Upload image" />
+                            </div>
+                      </div>  
+                   
                     <!--status end-->
                 
                 
@@ -160,7 +234,7 @@
 
             <!--newsfeed-->
             
-                <div class="col-md-2 mar40">
+                <div class="col-md-2 marleft2 mar40">
                     <div class="row trends"></div>
 
                 </div>        
@@ -168,6 +242,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
       <script>
       $(document).ready(function(){
     	  $('.menu').click(function(){

@@ -6,7 +6,7 @@ body{
 
 .loginrow{
     /*background:#62C192;*/
-    background: #0055a2;
+    background: #4267b2;
     padding-top:30px;
     padding-bottom:30px;
 }
@@ -37,7 +37,7 @@ body{
     padding-top:30px;
     padding-bottom:30px;
     /*background:#62C192;*/
-    background: #0055a2;
+    background: #4267b2;
 }
 
 .sidebar img{
@@ -64,7 +64,6 @@ body{
     border:none;
     resize:none;
     width:90%;
-    border-bottom:1px solid #999;
     padding-bottom:40px;
     background:none;
 }
@@ -87,6 +86,10 @@ body{
 .marleft2{
     margin-left:4%;
 }
+.marright2{
+    margin-left:4%;
+}
+
 
 
 .feed{
@@ -164,7 +167,9 @@ body{
 }
 
 .btn2{
-    background:#62C192;
+    /*background:#62C192;*/
+    background: #337ab7;
+    border-radius: 4px;
     color:#fff;
     border:none;
     padding:10px 30px;
