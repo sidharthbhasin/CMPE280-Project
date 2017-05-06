@@ -5,7 +5,8 @@ body{
 }
 
 .loginrow{
-    background:#62C192;
+    /*background:#62C192;*/
+    background: #0055a2;
     padding-top:30px;
     padding-bottom:30px;
 }
@@ -35,7 +36,8 @@ body{
 .sidebar{
     padding-top:30px;
     padding-bottom:30px;
-    background:#62C192;
+    /*background:#62C192;*/
+    background: #0055a2;
 }
 
 .sidebar img{
@@ -43,7 +45,9 @@ body{
 }
 
 .active{
-    background:#457F5F;
+    /*background:#457F5F;*/
+    color:black;
+    background: white;
     padding:5px 10px;
 }
 
@@ -273,6 +277,7 @@ body{
     .sideouter{
     	margin-top: 3%;
         float: left;
+       
     }
 
     .sidebar{
