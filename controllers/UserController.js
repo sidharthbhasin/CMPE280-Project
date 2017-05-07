@@ -1,5 +1,6 @@
 
 module.exports = function(app){
+  console.log('[api] User controller up');
 
   var bodyParser = require('body-parser');
   var jsonParser = bodyParser.json();
@@ -7,10 +8,6 @@ module.exports = function(app){
   var mongoose = require('mongoose');
   var userSchema = require('../models/User.js');
   var User = mongoose.model('User',userSchema);
-
-  mongoose.Promise = require('bluebird');
-  mongoose.connect('mongodb://root:root@ds131041.mlab.com:31041/spartascoop')
-  console.log('[mlab] connected to spartascoop');
 
   // USER API v1.0.0
 
@@ -93,6 +90,17 @@ module.exports = function(app){
             return res.status(200).send('{"message":"Login successful"}');
         }
       });
+    });
+
+    // validate unique username
+    app.get('/v1/users/:username/checkunique', function(req, res){
+        User.find({username:req.params.username}, function(error, user){
+          if(error){res.status(404).send('{ "message" : "Username search failure."}');}
+          if(user.length == 0)
+            res.status(200).send('{ "message" : "Username is unique"}');
+          else
+            res.status(401).send('{ "message" : "Username already exists"}');
+        });
     });
 
 };
