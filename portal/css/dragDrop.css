@@ -6,10 +6,10 @@ article{
 }
 #holderSection { 
 	border: 1px solid #ccc; 
-	width: 100%; 
+	width: 90%; 
 	min-height: 30px;
 	/*margin: 20px auto;*/
-	float: right;
+	float: left;
 }
 #holderSection.hover { 
 	border: 10px dashed #0c0; 
@@ -31,22 +31,6 @@ article{
 
 }
 
-.fileUpload {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-}
-.fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
 .imgSize{
 	max-height: 60px; 
 	max-width: 60px;

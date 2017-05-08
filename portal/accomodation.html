@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accomodation</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/accomodation.css" rel="stylesheet" type="text/css">
+    
+</head>
+  
+<body style="color: black">    
+    <div class="container-fluid">
+        
+
+        <div class="row loginrow">
+            <div class="container">
+               
+                <div class="col-md-3 col-xs-6 logo">
+                    <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+                </div>
+        
+                <div class="col-xs-6 text-right phonenv">
+                    <div class="col-xs-4 col-xs-offset-5 prp">
+                        <img src="img/guy2.svg">
+                    </div>
+                    <div class="col-xs-2 menu">
+                        <img src="img/arrow.svg">
+                    </div>
+                </div>
+
+               <div class="col-md-9 text-right">
+                    <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
+                      <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">privacy</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <!--phonenav-->
+        <div class="row phnav text-center">
+            <ul>
+                <li><p>Sidharth Bhasin</p></li>
+                <li><a href="#" class="active">TIMELINE</a></li>
+                <li><a href="profile.html">EDIT PROFILE</a></li>
+                <li><a href="#">ON CAMPUS JOBS</a></li>
+                <li><a href="marketplace.html">MARKET PLACE</a></li>
+                <li><a href="#">LOG OUT</a></li>
+            </ul>
+        </div>
+        <!--phonenavend-->
+        
+        
+        <!--sidebar-->
+        <div class="sideouter">
+            <div class="col-md-2 mar40 sidebar">
+                <div class="row text-center">
+                    <img src="img/guy2.svg">
+                </div>
+        
+                <div class="row text-center mar20">
+                    <p class="dname">Sidharth Bhasin</p>
+                </div>
+        
+                <div class="row text-center nvv">
+                    <ul>
+                        <li><a href="#" class="active">TIMELINE</a></li>
+                        <li><a href="profile.html">EDIT PROFILE</a></li>
+                        <li><a href="#">ON CAMPUS JOBS</a></li>
+                        <li><a href="marketplace.html">MARKET PLACE</a></li>
+                        <li><a href="#">LOG OUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!--sidebar end-->
+        
+        
+        <!--newsfeed-->
+        <div class="col-md-7 marleft2 mar40 newclass">
+            <div id="map"></div>
+            
+        </div>
+
+
+        <!--newsfeed-->
+        
+        <div class="col-md-2 marleft2 mar40">
+            <div class="row trends"></div>
+
+        </div>        
+    </div>
+    <script>
+      function initMap() {
+        
+        var uluru = [[{lat: 37.542571, lng: -121.993037}, 10000000],
+                     [{lat: 37.525400, lng: -122.037764}, 3000000],
+                     [{lat: 37.587546, lng: -122.066716}, 120000000],
+
+                     [{lat: 37.587546, lng: -122.066716}, 120000000],
+                     [{lat: 37.660284, lng: -122.089396}, 5000000],
+                     [{lat: 37.492686, lng: -122.249346}, 3002000],
+
+                     [{lat: 37.007888, lng: -122.067355}, 88999090],
+                     [{lat: 37.113164, lng: -121.651485}, 88999090],
+                     [{lat: 37.638625, lng: -121.911430}, 1000000],
+
+                     [{lat: 37.594870, lng: -122.473562}, 50000],
+                     [{lat: 36.995174, lng: -121.602745}, 50000],
+
+                     [{lat: 37.753038, lng: -122.423198}, 1000000],
+
+
+                     [{lat: 37.344717, lng: -121.979666}, 1000000],
+
+                     [{lat: 37.527798, lng: -122.312989}, 300000], 
+                     [{lat: 37.006852, lng: -122.064148}, 1000000]
+                    ];
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: uluru[12][0]
+        });
+        var marker = "";
+
+        for(var i=0;i<15;i++){
+            console.log('jsdsjd');
+            marker = new google.maps.Marker({
+              position: uluru[i][0],
+              animation: google.maps.Animation.DROP,
+              map: map
+            });
+            marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+        }
+
+        for (i=0;i<11;i++) {
+          var circle = new google.maps.Circle({
+            strokeColor: '#64967d',
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: '#b0ecf4',
+            fillOpacity: 0.35,
+            map: map,
+            center: uluru[i][0],
+            radius: Math.sqrt(uluru[i][1]) * 2
+          });
+        }
+      }
+
+
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcPwALh103uGlDrdPVD2xcKmA7BY5Weo&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      <script>
+      $(document).ready(function(){
+    	  $('.menu').click(function(){
+    		  $('.phnav').slideToggle();
+    		  })
+    	  
+    	  })
+      </script>
+  </body>
+</html>
