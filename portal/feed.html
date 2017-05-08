@@ -35,20 +35,7 @@
                 </div>
 
                <div class="col-md-9 text-right ">
-
-                  <form action="/hms/accommodations" method="GET"> 
-                      <div class="row">
-                        <div class="col-xs-6 col-md-4">
-                          <div class="input-group">
-                               <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
-                               <div class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                               </div>
-                         </div>
-                        </div>
-                        <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
+                    <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
                       <div class="btn-group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
@@ -61,9 +48,7 @@
                         <li><a href="#">Logout</a></li>
                       </ul>
                     </div>
-
-                      </div>
-                   </form> 
+                    
                 </div>
 
 
@@ -112,9 +97,19 @@
         
         <!--newsfeed-->
                 <div class="col-md-7 marleft2 mar50 newclass">
-                
+
                     <!--status-->
                     <div class="row" style=" border-bottom:1px solid #999;">
+
+                      <form action="/hms/accommodations" method="GET">            
+                        <div class="input-group pull-right">
+                           <input type="text" class="form-control" placeholder="Search for post" id="txtSearch"/>
+                           <div class="input-group-btn pull-right">
+                                
+                           </div>
+                           </div>
+                     </form>
+
                         <div class="row" >
                             <textarea class="status"   style="color: black" placeholder="Say Something...."></textarea>
                         </div>

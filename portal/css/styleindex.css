@@ -2,24 +2,29 @@
 /* CSS Document */
 body{
     font-family: 'Karla', sans-serif;
+    color: black;
 }
 
 
 .loginrow{
-    background:#62C192;
+    /*background:#62C192;*/
+    background: #4267b2;
     padding-top:30px;
     padding-bottom:30px;
 }
 
 .loginrow img{
-    width:100px;
+    /*width:100px;*/
+    max-width: 200px;
 }
 
 .inp{
     border: none;
-    background: #5aa982;
+    /*background: #5aa982;*/
+    background: white;
     width: 100%;
-    padding: 5px;color:#fff;
+    padding: 5px;
+    color: black;
 	padding-left:10px;
 }
 
@@ -67,7 +72,8 @@ body{
 h2{
     font-weight:300;
     font-size:20px;
-    color:#62C192;
+    /*color:#62C192;*/
+    color: black;
     line-height:28px;
     letter-spacing:1px;
 }
@@ -232,8 +238,9 @@ p{
 }
 
 .forgot a{
-    font-size:9.3px;
+    font-size:15px;
     color:#fff;
+    text-decoration:none;
 }
 
 .sup{

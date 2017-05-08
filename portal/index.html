@@ -4,19 +4,36 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PortalB</title>
+        <title>Spartan-Scoop</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/styleindex.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+        <link href="css/admin.css" rel="stylesheet" type="text/css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/passwordStrength.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="img/spartans.png">
+
+           
+           <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,fr,hi,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+
     </head>
     <body>
         <div class="container-fluid">
+
+
             <div class="row loginrow">
                 <div class="container">
-                
+            
                     <div class="outermain">
                         <div class="col-md-3">
-                            <img src="img/logo.svg">
+                            <img src="img/sparta-scoop.png">
                         </div>
                         
                         <div class="col-md-7 col-md-offset-2">
@@ -42,28 +59,198 @@
             </div>
         
         
-            <div class="container">
+            <div class="container mar50" style="height: 500px; ">
                 
-                <div class="col-md-6 absimg mar50">
-                    <img src="img/guy.svg">
+                <div class="col-md-6 ">
+                    <!-- <img src="img/guy.svg"> -->
+
+
+                    <div class="container-fluid">
+                      <div class="row">
+                       <div class="col-sm-12">
+                         <div id="my-slider" class="carousel slide" data-ride="carousel">
+                            
+
+                           <ol class="carousel-indicators">
+                                <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                                <li data-target="#my-slider" data-slide-to="1"></li>
+                                <li data-target="#my-slider" data-slide-to="2"></li>
+                           </ol>
+                     
+                           <div class="carousel-inner" role="listbox">
+                             <div class="item active">
+                                 <img  src="img/sjsu1.png" alt="First slide">
+                             </div>
+                             <div class="item">
+                                 <img  src="img/sjsu2.jpg" alt="First slide">
+                             </div>
+                             <div class="item">
+                                <img  src="img/sjsu1.png" alt="First slide">
+                             </div>
+                          </div>
+                          <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevon-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevon-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                          </a> 
+                         </div>
+                       </div> 
+                      </div> 
+                    </div>
+
                 </div>
             
-                <div class="col-md-6 col-md-offset-6 sup">
-                    <h2>
-                        Create an acount<br>It's free and always will be</h2>
-            
+                <div class="col-md-6 ">
+                          
+                    <h2>Create an acount<br>It's free and always will be</h2>
+                         
                     <form>
-                        <input type="email" name="emailsignup" class="inp2 mar20" placeholder="email">
-                        <input type="password" name="passsignup" class="inp2 mar20" placeholder="password">
-                        <input type="password" name="conpasssignup" class="inp2 mar20" placeholder="confirm password">
+                        <input type="email" name="emailsignup" id="userid" class="inp2 mar20" placeholder="email">
+                        <input id="password" type="password" name="passsignup" class="inp2 mar20" placeholder="password" oninput="checkPassword()" required>
+                       <div id="b"><img src="img/checkMark.png" class="checkmark1" id="checkmark1"></div>
+                       <input type="password" name="conpasssignup" class="inp2 mar20" placeholder="confirm password" required id="passwordVerify" oninput="Verify()">
+                       <div id="b"> <img src="img/wrong.png" class="checkmarkDisplay" id="NotVerified">
+                        <img src="img/checkMark.png" class="checkmarkDisplay" id="Verified">
+                    <!-- onmouseout="Verify()" -->
+
                         <input type="submit" value="Sign Up" class="btn2 mar20">
                     </form>
+
+                       <!--  password Strength-->
+
+                      
+
+                          <div id="passwordStrength" class="passwordStrength" style="z-index: 4">     
+                                  <div id="top" >Password Strength
+                                  <!-- <span class="close">&times;</span> -->
+                                  </div>
+                                  <div id ="showingPasswordStrngth"></div> 
+                                  <div id="body">
+                                    <table>
+                                        <tr>
+                                            <td ><img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">1 upper-case letter</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">1 lower-case letter</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">1 number</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">8 or more character</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="img/wrong.png" class="checkmark">
+                                                <img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">Use only these English character A-z,0-9,@,.,_,- </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="img/checkMark.png" class="checkmark"></td>
+                                            <td class="text">Your password can not be the same as your user ID</td>
+                                        </tr>
+                                    </table>
+
+                                  </div>
+                         </div>
+                        <!--  <div id="passwordDetails" class="passwordDetails" style="z-index: 6">     
+                            <p>Must be between 7-20 characters in length and include 4 alpha characters; 1 numeric character (0,9) or 
+                            1 special character (!,#,$,%). Te password is case sensitive and must not contain spaces or be the same as your user ID.  </p>  
+                         </div> -->
+
+                          <!--end of password strength-->
+
                 </div>   
+
             </div>
         </div>
+
+
+
+
+   <footer style="margin-top: 20px; bottom: 0px;">
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Get To Know Us</h3>
+                    <ul>
+                        <li> <a href="#"> Careers </a> </li>
+                        <li> <a href="#"> About Sparta-Scoop </a> </li>
+                        <li> <a href="#"> Investor Relation </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Information for </h3>
+                    <ul>
+                        <li> <a href="#">Alumni </a></li>
+                        <li> <a href="#">Current Students </a></li>
+                        <li> <a href="#">Donors </a></li>
+                        <li> <a href="#">Faculty and Staff </a></li>
+                        <li> <a href="#"> Researchers </a></li>
+               
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Let Us Help You </h3>
+                    <ul>
+                        <li> <a href="#"> Your Account </a> </li>
+                        <li> <a href="#"> Help </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Policies </h3>
+                    <ul>
+                        <li> <a href="#"> Privacy Policy </a> </li>
+                        <li> <a href="#"> Community Guidelines </a> </li>
+                        <li> <a href="#"> Cookie Policy </a> </li>
+                        <li> <a href="#"> Copyright Policy </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3 style="border:none;"> <div id="google_translate_element" class="languageDisplay"></div></h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email " style="color: black;">
+                                <button class="btn  bg-gray" type="button"> Contact Us <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="text-center"> Copyright © CMPE 280 Final Project. All right reserved. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+
+
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
+         <script src="js/passwordStrength.js"></script>
   </body>
 </html>
