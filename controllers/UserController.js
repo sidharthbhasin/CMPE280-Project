@@ -33,10 +33,21 @@ module.exports = function(app){
 
   // create new user
   app.post('/v1/users', jsonParser, function(req, res){
-    var user = User(req.body).save(function(error){
-      if(error) res.status(500).send('{ "message" : "Unable to save user"}');
-      res.status(200).json(User(req.body));
-    });
+
+    // check if the email id is already taken
+     User.find({user_emailid:req.body.user_emailid},function(error, user){
+       if(error){res.status(500).send('{ "message" : "Unable to register user"}');}
+       else if(user.length != 0){
+         res.status(404).send('{ "message" : "Email already registerd"}');
+       }
+       else{
+         var user = User(req.body).save(function(error){
+           if(error) res.status(500).send('{ "message" : "Unable to register user"}');
+           res.status(200).json(User(req.body));
+         });
+       }
+     });
+
   });
 
   // delete user profile by email id
@@ -83,8 +94,15 @@ module.exports = function(app){
 
   // user login
   // hostname/v1/users/xxx/login
-  app.post('/v1/users/:user_emailid/login', jsonParser, function(req, res){
+  app.post('/v1/users/:user_emailid/login', function(req, res){
+
       console.log('[api] authenticating - ' + req.params.user_emailid);
+
+      // Website you wish to allow to connect
+      res.setHeader('Access-Control-Allow-Origin', '*');
+
+      console.log('[api] ' + req.body);
+
       User.find({user_emailid:req.params.user_emailid}, function(error, user){
 
         var temp = JSON.parse(JSON.stringify(user));
@@ -92,11 +110,17 @@ module.exports = function(app){
         else{
           var in_pwd = req.body.password;
           var usr_pwd = temp[0]['user_password'];
+
           // compare the passwords
           if(in_pwd !== usr_pwd)
-            return res.status(404).send('{"message":"Login failed"}');
+          {
+            console.log('[api] login fail');
+            return res.status(200).send('{"message":"Login failed"}');
+          }
           else
+          { console.log('[api] login success');
             return res.status(200).send('{"message":"Login successful"}');
+          }
         }
       });
     });
