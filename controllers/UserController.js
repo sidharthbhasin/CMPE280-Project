@@ -19,9 +19,9 @@ module.exports = function(app){
     });
   });
 
-  // get particular user
-  app.get('/v1/users/:username', function(req, res){
-    User.find({username:req.params.username}, function(error, user){
+  // get particular user by email id
+  app.get('/v1/users/:user_emailid', function(req, res){
+    User.find({user_emailid:req.params.user_emailid}, function(error, user){
 
       if(error) res.status(500).send('{ "message" : "Unable to find user"}');
       else if(user.length == 0){
@@ -39,10 +39,10 @@ module.exports = function(app){
     });
   });
 
-  // delete user profile
-  app.delete('/v1/users/:username', function(req,res){
+  // delete user profile by email id
+  app.delete('/v1/users/:user_emailid', function(req,res){
      // first find the user and then delete him/her
-     User.find({username:req.params.username},function(error, user){
+     User.find({user_emailid:req.params.user_emailid},function(error, user){
        console.log(user);
        if(error){res.status(500).send('{ "message" : "Unable to delete user"}');}
        else if(user.length == 0){
@@ -50,7 +50,7 @@ module.exports = function(app){
        }
        else{
          try{
-         User.findOneAndRemove( { username:user[0].username }, function(err){
+         User.findOneAndRemove( { user_emailid:user[0].user_emailid }, function(err){
            if(err) return res.status(500).send('{ "status" : "Unable to delete user" }');
            res.status(200).send('{ "status" : "User deleted" }');
          });
@@ -62,15 +62,15 @@ module.exports = function(app){
      });
   });
 
-  // update user profile
-  app.put('/v1/users/:username', jsonParser, function(req, res){
+  // update user profile - with email id
+  app.put('/v1/users/:user_emailid', jsonParser, function(req, res){
     // first find the user and then update him/her
-    User.find({username:req.params.username},function(error, user){
+    User.find({user_emailid:req.params.user_emailid},function(error, user){
       if(error){res.status(404).send('{ "message" : "User not found"}');}
       else{
            console.log("[api] user found");
            var new_user = req.body;
-           User.findOneAndUpdate({'username':req.params.username},new_user,function(e,u){
+           User.findOneAndUpdate({'user_emailid':req.params.user_emailid},new_user,function(e,u){
              if(e) return res.status(500).send('{ "status" : "Failed to update user" }');
              else{
                console.log("[api] user updated");
@@ -82,9 +82,10 @@ module.exports = function(app){
   });
 
   // user login
-  app.post('/v1/users/:username/login', jsonParser, function(req, res){
-      console.log('[api] authenticating - ' + req.params.username);
-      User.find({username:req.params.username}, function(error, user){
+  // hostname/v1/users/xxx/login
+  app.post('/v1/users/:user_emailid/login', jsonParser, function(req, res){
+      console.log('[api] authenticating - ' + req.params.user_emailid);
+      User.find({user_emailid:req.params.user_emailid}, function(error, user){
 
         var temp = JSON.parse(JSON.stringify(user));
         if(error){res.status(404).send('{ "message" : "User not found"}');}
@@ -101,13 +102,13 @@ module.exports = function(app){
     });
 
     // validate unique username
-    app.get('/v1/users/:username/checkunique', function(req, res){
-        User.find({username:req.params.username}, function(error, user){
+    app.get('/v1/users/:user_emailid/checkunique', function(req, res){
+        User.find({user_emailid:req.params.user_emailid}, function(error, user){
           if(error){res.status(404).send('{ "message" : "Username search failure."}');}
           if(user.length == 0)
-            res.status(200).send('{ "message" : "Username is unique"}');
+            res.status(200).send('{ "message" : "Email is unique"}');
           else
-            res.status(401).send('{ "message" : "Username already exists"}');
+            res.status(401).send('{ "message" : "Email already exists"}');
         });
     });
 
