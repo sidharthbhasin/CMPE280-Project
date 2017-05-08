@@ -69,15 +69,15 @@ module.exports = function(app){
   app.put('/v1/jobs/:jobid', jsonParser, function(req, res){
     // first find the user and then update him/her
     Job.find({_id:req.params.jobid},function(error, job){
-      if(error){res.status(404).send('{ "message" : "User not found"}');}
+      if(error){res.status(404).send('{ "message" : "Job not found"}');}
       else if(job.length ==0){
         res.status(404).send('{ "message" : "Job not found"}');
       }
       else{
-           console.log("[api] user found");
+           console.log("[api] job found");
            var njob = req.body;
            Job.findOneAndUpdate({_id:req.params.jobid},njob,function(e,u){
-             if(e) return res.status(500).send('{ "status" : "Failed to update user" }');
+             if(e) return res.status(500).send('{ "status" : "Failed to update job" }');
              else{
                console.log("[api] user updated");
                res.status(200).send(njob);
