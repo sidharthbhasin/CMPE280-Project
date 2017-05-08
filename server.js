@@ -6,6 +6,7 @@ var app = express();
 var user_controller = require('./controllers/UserController.js');
 var job_controller = require('./controllers/JobController.js');
 var event_controller = require('./controllers/EventController.js');
+var accomodation_controller = require('./controllers/AccomodationController.js');
 
 // connect to the db
 mongoose.Promise = require('bluebird');
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://root:root@ds131041.mlab.com:31041/spartascoop')
 user_controller(app);
 job_controller(app);
 event_controller(app);
+accomodation_controller(app);
 
 app.listen(3000);
 

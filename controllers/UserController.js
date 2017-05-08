@@ -22,7 +22,11 @@ module.exports = function(app){
   // get particular user
   app.get('/v1/users/:username', function(req, res){
     User.find({username:req.params.username}, function(error, user){
+
       if(error) res.status(500).send('{ "message" : "Unable to find user"}');
+      else if(user.length == 0){
+        res.status(404).send('{ "message" : "User not found"}');
+      }
       res.status(200).json(user);
     });
   });
@@ -39,7 +43,11 @@ module.exports = function(app){
   app.delete('/v1/users/:username', function(req,res){
      // first find the user and then delete him/her
      User.find({username:req.params.username},function(error, user){
+       console.log(user);
        if(error){res.status(500).send('{ "message" : "Unable to delete user"}');}
+       else if(user.length == 0){
+         res.status(404).send('{ "message" : "User not found"}');
+       }
        else{
          try{
          User.findOneAndRemove( { username:user[0].username }, function(err){
