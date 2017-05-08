@@ -17,7 +17,8 @@
 }
 .footer {
 	/*background: #EDEFF1;*/
-	 background: #0055a2;
+	 /*background: #0055a2;*/
+	 background: #4267b2;
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -145,3 +146,4 @@
 .payments {
 	font-size: 1.5em;	
 }
+
