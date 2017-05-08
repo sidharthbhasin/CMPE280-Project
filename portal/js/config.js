@@ -1,3 +1,14 @@
+window.onload = function(){
+        setInterval(function(){ 
+            if (navigator.onLine == false) {
+                alert('You are not connected to internet');
+            } 
+        }, 5000);
+    }
+
+
+
+
 var holder = document.getElementById('holderSection'),
    innerHolder=document.getElementById('innerHolder'),
    innerHolder1=document.getElementById('innerHolder1'),

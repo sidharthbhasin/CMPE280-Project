@@ -1,3 +1,13 @@
+window.onload = function(){
+        setInterval(function(){ 
+            if (navigator.onLine == false) {
+                alert('You are not connected to internet');
+            } 
+        }, 5000);
+    }
+
+
+
 
 function valemail(tag, email) {
 

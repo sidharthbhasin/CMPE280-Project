@@ -1,4 +1,14 @@
 
+window.onload = function(){
+        setInterval(function(){ 
+            if (navigator.onLine == false) {
+                alert('You are not connected to internet');
+            } 
+        }, 5000);
+    }
+
+
+
 //live charts
 
 $(document).ready(function () {
