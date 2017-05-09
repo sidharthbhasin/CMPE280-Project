@@ -407,8 +407,26 @@ app.delete('/v1/accomodations/:acmdid', function(req, res){
   });
 });
 
-
 // **** accomodation controller ends here *****
+
+// ********* ANALYTICS API starts here *********
+
+// ANALYTICS API v1.0.0
+
+app.get('/v1/analytics/postcounts', function(req, res){
+     var counts = {};
+     Event.find({}, function(e1, es){
+          counts.events = es.length;
+          Job.find({}, function(e2, jb){
+            counts.jobs = jb.length;
+            Accomodation.find({}, function(e3,as){
+              counts.accomodations = as.length;
+              res.status(200).send(counts);
+            });
+          });
+     });
+});
+// *********************************************
 
 // connect to the db
 mongoose.Promise = require('bluebird');

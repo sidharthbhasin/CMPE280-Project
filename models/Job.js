@@ -14,6 +14,8 @@ var jobSchema = mongoose.Schema({
    dateposted : String,
    departement : String,
    payrate : String,
+   postedby : String,
+   postedbydetails : {}
 });
 
 module.exports = jobSchema;

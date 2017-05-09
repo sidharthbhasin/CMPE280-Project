@@ -12,6 +12,8 @@ var accomodationSchema = mongoose.Schema({
   longitude : String,
   contact : String,
   rent : String,
+  postedby : String,
+  postedbydetails : {}
 });
 
 module.exports = accomodationSchema;
