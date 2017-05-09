@@ -1,14 +1,35 @@
 
 window.onload = function(){
-        setInterval(function(){ 
+        setInterval(function(){
             if (navigator.onLine == false) {
                 alert('You are not connected to internet');
-            } 
+            }
         }, 5000);
     }
 
-
-
+    $(document).ready(function() {
+      //$.ajax({
+        //url: "localhost:3000/v1/analytics/postcounts",
+        //type: "GET",
+        //async: true,
+        //dataType: "json",
+        //success: function (data) {
+         var data = {
+          'jobs':5,
+            'events':10,
+           'accomodations':15,
+            'Computer Science':0.1,
+            'Software Engineering':0.3,
+          'Computer Engineering':0.25,
+            'Electrical & Electronics Engineering':0.15,
+            'Civil Engineering':0.2,
+            'Mechanical Engineering':0.15
+          };
+            makeCircleChart(data);
+            makePieChart(data);
+        //}
+      //});
+  });
 //live charts
 
 $(document).ready(function () {
@@ -122,7 +143,7 @@ Highcharts.chart('containerPost', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Rainfall (mm)'
+            text: 'Posts'
         }
     },
     tooltip: {
@@ -161,7 +182,11 @@ Highcharts.chart('containerPost', {
 
 
 // semi circle charts
-
+function makeCircleChart(data)
+{
+  var v1 = data['events'];
+  var v2 = data['jobs'];
+  var v3 = data['accomodations'];
 Highcharts.chart('containerSemiCircle', {
     chart: {
         plotBackgroundColor: null,
@@ -169,7 +194,7 @@ Highcharts.chart('containerSemiCircle', {
         plotShadow: false
     },
     title: {
-        text: 'Browser<br>shares<br>2015',
+        text: 'Posts per catagory',
         align: 'center',
         verticalAlign: 'middle',
         y: 40
@@ -196,13 +221,10 @@ Highcharts.chart('containerSemiCircle', {
         type: 'pie',
         name: 'Browser share',
         innerSize: '50%',
-        //data = api;
         data: [
-            ['Firefox',   10.38],
-            ['IE',       56.33],
-            ['Chrome', 24.03],
-            ['Safari',    4.77],
-            ['Opera',     0.91],
+            ['Jobs',   v1],
+            ['Events',       v2],
+            ['Accomodations', v3],
             {
                 name: 'Proprietary or Undetectable',
                 y: 0.2,
@@ -213,12 +235,19 @@ Highcharts.chart('containerSemiCircle', {
         ]
     }]
 });
-
+}
 
 //pie chart
 
 
-$(document).ready(function () {
+function makePieChart(data)
+{
+  var v1 = data['Computer Science'];
+  var v2 = data['Software Engineering'];
+  var v3 = data['Computer Engineering'];
+  var v4 = data['Electrical & Electronics Engineering'];
+  var v5 = data['Civil Engineering'];
+  var v6 = data['Mechanical Engineering'];
 
     // Build the chart
     Highcharts.chart('containerPieChart', {
@@ -229,7 +258,7 @@ $(document).ready(function () {
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares January, 2015 to May, 2015'
+            text: 'Number of Users per Major'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -248,29 +277,29 @@ $(document).ready(function () {
             name: 'Brands',
             colorByPoint: true,
             data: [{
-                name: 'Microsoft Internet Explorer',
-                y: 56.33
+                name: 'Computer Science',
+                y: v1
             }, {
-                name: 'Chrome',
-                y: 24.03,
+                name: 'Software Engineering',
+                y: v2,
                 sliced: true,
                 selected: true
             }, {
-                name: 'Firefox',
-                y: 10.38
+                name: 'Computer Engineering',
+                y: v3
             }, {
-                name: 'Safari',
-                y: 4.77
+                name: 'Electrical & Electronics Engineering',
+                y: v4
             }, {
-                name: 'Opera',
-                y: 0.91
+                name: 'Civil Engineering',
+                y: v5
             }, {
-                name: 'Proprietary or Undetectable',
-                y: 0.2
+                name: 'Mechanical Engineering',
+                y: v6
             }]
         }]
     });
-});
+};
 
 
 //Combination charts
@@ -361,7 +390,7 @@ function displayUserAnalysis(){
 }
 
 function displayUsersOnline(){
-    
+
     containerAnalysis.style.display="none";
     containerOnlineObj.style.display="block";
     containerPostObj.style.display="none";
@@ -380,15 +409,3 @@ function displayPostsMonthly(){
     adminGraph2.classList.remove("active");
     adminGraph3.classList.add("active");
 }
-
-
-
-
-
-
-
-
-
-
-
-

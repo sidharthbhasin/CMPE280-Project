@@ -1,249 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PortalB</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>PortalB</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/feed.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-     <link href="css/dragDrop.css" rel="stylesheet" type="text/css">
+   <link href="css/feed.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/dragDrop.css" rel="stylesheet" type="text/css">
 </head>
-  
-<body style="color: black">
-    <div class="container-fluid">
-        
-        <div class="row loginrow">
-            <div class="container">
-               
-                <div class="col-md-3 col-xs-6 logo">
-                    <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
-                </div>
-        
-                <div class="col-xs-6 text-right phonenv">
-                    <div class="col-xs-4 col-xs-offset-5 prp">
-                        <img src="img/guy2.svg">
-                    </div>
-                    <div class="col-xs-2  menu">
-                        <img src="img/arrow.svg">
-                    </div>
-                </div>
 
-               <div class="col-md-9 text-right ">
-                    <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
-                      <div class="btn-group">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">privacy</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Logout</a></li>
-                      </ul>
-                    </div>
-                    
-                </div>
+<body style="color: black">    
+   <div class="container-fluid">
 
 
-            </div>
-        </div>
+       <div class="row loginrow" id="headerInsert">
+           <div class="container">
 
-        <!--phonenav-->
-        <div class="row phnav text-center">
-            <ul>
-                <li><p>Sidharth Bhasin</p></li>
-                <li><a href="#" class="active">TIMELINE</a></li>
-                <li><a href="profile.html">EDIT PROFILE</a></li>
-                <li><a href="#">ON CAMPUS JOBS</a></li>
-                <li><a href="marketplace.html">MARKET PLACE</a></li>
-                <li><a href="#">LOG OUT</a></li>
-            </ul>
-        </div>
-        <!--phonenavend-->
-        
-        
-        <!--sidebar-->
-        <div class="sideouter">
-            <div class="col-md-2 mar40 sidebar">
-                <div class="row text-center">
-                    <img src="img/guy2.svg">
-                </div>
-        
-                <div class="row text-center mar20">
-                    <p class="dname">Sidharth Bhasin</p>
-                </div>
-        
-                <div class="row text-center nvv">
-                    <ul>
-                        <li><a href="#" class="active">TIMELINE</a></li>
-                        <li><a href="profile.html">EDIT PROFILE</a></li>
-                        <li><a href="#">ON CAMPUS JOBS</a></li>
-                        <li><a href="marketplace.html">MARKET PLACE</a></li>
-                        <li><a href="#">LOG OUT</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    
-        <!--sidebar end-->
-        
-        
-        <!--newsfeed-->
-                <div class="col-md-7 marleft2 mar50 newclass">
+               <div class="col-md-3 col-xs-6 logo">
+                   <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+               </div>
 
-                    <!--status-->
-                    <div class="row">
+               <div class="col-xs-6 text-right phonenv">
+                   <div class="col-xs-4 col-xs-offset-5 prp">
+                       <img src="img/guy2.svg">
+                   </div>
+                   <div class="col-xs-2  menu">
+                       <img src="img/arrow.svg">
+                   </div>
+               </div>
 
-                      <form action="/hms/accommodations" method="GET">            
-                        <div class="input-group pull-right" style="margin-right: 8%">
-                           <input type="text" class="form-control" placeholder="Search for post" id="txtSearch"/>
-                           <div class="input-group-btn pull-right">
-                                
+              <div class="col-md-9 text-right ">
+                   <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
+                     <div class="btn-group">
+                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                       <li><a href="#">Profile</a></li>
+                       <li><a href="#">Settings</a></li>
+                       <li><a href="#">privacy</a></li>
+                       <li role="separator" class="divider"></li>
+                       <li><a href="#">Logout</a></li>
+                     </ul>
+                   </div>
+
+               </div>
+
+
+           </div>
+       </div>
+
+       <!--phonenav-->
+       <div class="row phnav text-center">
+           <ul>
+               <li><p>Sidharth Bhasin</p></li>
+               <li><a href="#" class="active">TIMELINE</a></li>
+               <li><a href="profile.html">EDIT PROFILE</a></li>
+               <li><a href="#">ON CAMPUS JOBS</a></li>
+               <li><a href="marketplace.html">MARKET PLACE</a></li>
+               <li><a href="#">LOG OUT</a></li>
+           </ul>
+       </div>
+       <!--phonenavend-->
+
+
+       <!--sidebar-->
+       <div class="sideouter">
+           <div class="col-md-2 mar40 sidebar">
+               <div class="row text-center">
+                   <img src="img/guy2.svg">
+               </div>
+
+               <div class="row text-center mar20">
+                   <p class="dname">Sidharth Bhasin</p>
+               </div>
+
+               <div class="row text-center nvv">
+                   <ul>
+                       <li><a href="#" class="active">TIMELINE</a></li>
+                       <li><a href="profile.html">EDIT PROFILE</a></li>
+                       <li><a href="#">ON CAMPUS JOBS</a></li>
+                       <li><a href="marketplace.html">MARKET PLACE</a></li>
+                       <li><a href="#">LOG OUT</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+       <!--sidebar end-->
+
+
+       <!--newsfeed-->
+               <div class="col-md-7 marleft2 mar50 newclass" id="feedPost">
+
+                   <!--status-->
+                   <div class="row" style=" border-bottom:1px solid #999;">
+
+                     <form action="/hms/accommodations" method="GET">            
+                       <div class="input-group pull-right">
+                          <input type="text" class="form-control" placeholder="Search for post" id="txtSearch"/>
+                          <div class="input-group-btn pull-right">
+
+                          </div>
+                          </div>
+                    </form>
+
+                       <div class="row" >
+                           <textarea class="status"   style="color: black" placeholder="Say Something...."></textarea>
+                       </div>
+                       <div class="row">
+                        Drag and drop you image here
+                           <article>
+                             <div id="holderSection"> 
+
+                               <div id="innerHolder" style="color: black;padding: 5px; float: left;width: 20%;">
+                                       <img src="" class="imgSize" id="uploadImg">
+                               </div> 
+                               <div id="innerHolder1" style="color: black;padding: 5px; float: left;width: 20%;">
+                                       <img src="" class="imgSize" id="uploadImg">
+                               </div> 
+                               <div id="innerHolder2" style="color: black;padding: 5px; float: left;width: 20%;">
+                                       <img src="" class="imgSize" id="uploadImg">
+                               </div> 
+                               <div id="innerHolder3" style="color: black;padding: 5px; float: left;width: 20%;">
+                                       <img src="" class="imgSize" id="uploadImg">
+                               </div> 
+                               <div id="innerHolder4" style="color: black;padding: 5px; float: left;width: 20%;">
+                                       <img src="" class="imgSize" id="uploadImg">
+                               </div> 
+                             </div>      
+                           </article>
+                       </div>
+
+                   </div>
+                     <div class="row">
+
+                       <input type="submit" class="btn2 mar20" >
+
+                           <div class="fileUpload btn btn-primary">
+                               <span>Upload Image</span>
+                               <input type="file" onchange="previewFile()" class="upload" value="Upload image" />
                            </div>
-                           </div>
-                     </form>
-
-                        <div class="row" >
-                            <textarea class="status" placeholder="Say Something...."></textarea>
-                        </div>
-                        <div class="row">
-                            Drag and drop you image here
-                            <article>
-                              <div id="holderSection"> 
-
-                                <div id="innerHolder" style="color: black;padding: 5px; float: left;width: 20%;">
-                                        <img src="" class="imgSize" id="uploadImg">
-                                </div> 
-                                <div id="innerHolder1" style="color: black;padding: 5px; float: left;width: 20%;">
-                                        <img src="" class="imgSize" id="uploadImg">
-                                </div> 
-                                <div id="innerHolder2" style="color: black;padding: 5px; float: left;width: 20%;">
-                                        <img src="" class="imgSize" id="uploadImg">
-                                </div> 
-                                <div id="innerHolder3" style="color: black;padding: 5px; float: left;width: 20%;">
-                                        <img src="" class="imgSize" id="uploadImg">
-                                </div> 
-                                <div id="innerHolder4" style="color: black;padding: 5px; float: left;width: 20%;">
-                                        <img src="" class="imgSize" id="uploadImg">
-                                </div> 
-                              </div>      
-                            </article>
-                        </div>
-
-                    </div>
-                      <div class="row">
-
-                        <input type="submit" class="btn2 mar20" >
-
-                            <div class="fileUpload btn btn-primary">
-                                <span>Upload Image</span>
-                                <input type="file" onchange="previewFile()" class="upload" value="Upload image" />
-                            </div>
-                      </div>  
-                   
-                    <!--status end-->
-                
-                
-                    <!--feed-->
-                    <div class="row mar30">
-                        <div class="col-md-11 feed">
-                            <div class="row">
-                                <div class="col-md-12 pp">
-                                        <img class="img-responsive" src="img/guy1.svg"> 
-                                        <p>Sidharth Bhasin</p>
-                                </div>
-                            </div>
-                    
-                    
-                            <div class="row feed1">
-                                <div class="col-sm-12">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    has been the industry's standard dummy text ever since the 1500s,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="col-md-12 mar20 nopad">
-                            <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
-                        </div>
-                    </div>
-
-                    <div class="row mar30">
-                        <div class="col-md-11 feed">
-                            <div class="row">
-                                <div class="col-md-12 pp">
-                                        <img class="img-responsive" src="img/guy1.svg"> 
-                                        <p>Sidharth Bhasin</p>
-                                </div>
-                            </div>
-                    
-                    
-                            <div class="row feed1">
-                                <div class="col-sm-12">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    has been the industry's standard dummy text ever since the 1500s,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="col-md-12 mar20 nopad">
-                            <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
-                        </div>
-                    </div>
-
-                    <div class="row mar30">
-                        <div class="col-md-11 feed">
-                            <div class="row">
-                                <div class="col-md-12 pp">
-                                        <img class="img-responsive" src="img/guy1.svg"> 
-                                        <p>Sidharth Bhasin</p>
-                                </div>
-                            </div>
-                    
-                    
-                            <div class="row feed1">
-                                <div class="col-sm-12">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    has been the industry's standard dummy text ever since the 1500s,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="col-md-12 mar20 nopad">
-                            <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
-                        </div>
-                    </div>
-
-                </div>
+                     </div>  
 
 
-            <!--newsfeed-->
+
+                   <!--status end-->
+
+
+                   <!--feed-->
+
             
-                <div class="col-md-2 mar40 xx">
-                    <div class="row trends"></div>
+               
 
-                </div>        
-    </div>
+                   <div class="row mar30" id="postFeedDisplay">
+                       <div class="col-md-11 feed">
+                           <div class="row">
+                               <div class="col-md-12 pp">
+                                       <img class="img-responsive" src="img/guy1.svg"> 
+                                       <div><p style="width: 30%;float: left">Sidharth Bhasin</p>
+                                       <p style="width: 30%;float: right;">Date</p></div>
+                               </div>
+                           </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/config.js"></script>
-      <script>
-      $(document).ready(function(){
-    	  $('.menu').click(function(){
-    		  $('.phnav').slideToggle();
-    		  })
-    	  
-    	  })
-      </script>
-  </body>
+
+                           <div class="row feed1">
+                               <div class="col-sm-12">
+                                   <p>Teaching Assistant</p>
+                                     <p>Description</p>
+                                       <p>Location</p>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="col-md-12 mar20 nopad">
+                           <a href="#" class="btn3" id="like">LIKE</a> <a href="#" class="btn3" id="share">SHARE</a>
+                       </div>
+                   </div>
+
+
+
+
+
+
+
+
+
+
+                   <div class="row mar30">
+                       <div class="col-md-11 feed">
+                           <div class="row">
+                               <div class="col-md-12 pp">
+                                       <img class="img-responsive" src="img/guy1.svg"> 
+                                       <p>Sidharth Bhasin</p>
+                               </div>
+                           </div>
+
+
+                           <div class="row feed1">
+                               <div class="col-sm-12">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                   has been the industry's standard dummy text ever since the 1500s,
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="col-md-12 mar20 nopad">
+                           <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
+                       </div>
+                   </div>
+
+                   <div class="row mar30">
+                       <div class="col-md-11 feed">
+                           <div class="row">
+                               <div class="col-md-12 pp">
+                                       <img class="img-responsive" src="img/guy1.svg"> 
+                                       <p>Sidharth Bhasin</p>
+                               </div>
+                           </div>
+
+
+                           <div class="row feed1">
+                               <div class="col-sm-12">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                   has been the industry's standard dummy text ever since the 1500s,
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+
+                       <div class="col-md-12 mar20 nopad">
+                           <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
+                       </div>
+                   </div>
+
+               </div>
+
+
+           <!--newsfeed-->
+
+               <div class="col-md-2 marleft2 mar40">
+                   <div class="row trends"></div>
+
+               </div>        
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/config.js"></script>
+    <script>
+     $(document).ready(function(){
+         $('.menu').click(function(){
+             $('.phnav').slideToggle();
+             })
+
+         })
+   </script>
+
+   <script>
+
+
+
+      var post=[
+ {
+   "_id": "59111ce55d017b13ec7302c3",
+   "type": "TA",
+   "title": "Teaching Assistant for Sithu Aung CMPE273",
+   "description": "Apply only if you have taken the coures",
+   "location": "Doodly moore hall ",
+   "email": "s.aung@sjsu.edu",
+   "url": "www.google.com",
+   "dateposted": "07.07.2017",
+   "departement": "Computer Science",
+   "payrate": "15",
+   "postedby": "590f5eb7ec96bf2b5cdd3421",
+   "postedbydetails": {
+     "_id": "590f5eb7ec96bf2b5cdd3421",
+     "username": "kaushikshingne",
+     "user_emailid": "kaushik.shingne@sjsu.edu",
+     "user_password": "pqr",
+     "user_profilepicture_url": "https://avatars3.githubusercontent.com/u/4065884?v=3&u=a0ac43ec7cabf27ed83139f0674e0c9d46e12ea3&s=400",
+     "user_degree": "masters",
+     "user_major": "IE",
+     "__v": 0
+   },
+   "__v": 0
+ },
+ {
+   "_id": "59111e655d017b13ec7302c5",
+   "type": "RA",
+   "title": "Research Assistant for Chandra",
+   "description": "Apply only if you have taken the coures",
+   "location": "Clark Hall",
+   "email": "chandravup@sjsu.edu",
+   "url": "www.chandra.com",
+   "dateposted": "08.07.2017",
+   "departement": "SE",
+   "payrate": "5",
+   "postedby": "590f5eb7ec96bf2b5cdd3421",
+   "postedbydetails": {
+     "_id": "590f5eb7ec96bf2b5cdd3421",
+     "username": "sid",
+     "user_emailid": "kaushik.shingne@sjsu.edu",
+     "user_password": "pqr",
+     "user_profilepicture_url": "https://avatars3.githubusercontent.com/u/4065884?v=3&u=a0ac43ec7cabf27ed83139f0674e0c9d46e12ea3&s=400",
+     "user_degree": "masters",
+     "user_major": "IE",
+     "__v": 0
+   },
+   "__v": 0
+ },
+ {
+   "_id": "59111edc5d017b13ec7302c7",
+   "type": "ISA",
+   "title": "Grading assistant for Prof Ranjan",
+   "description": "Apply only if you have taken the coures",
+   "location": "180",
+   "email": "ranjan@sjsu.edu",
+   "url": "www.ranjan.com",
+   "dateposted": "09.07.2017",
+   "departement": "SE",
+   "payrate": "5",
+   "postedby": "590f5eb7ec96bf2b5cdd3421",
+   "postedbydetails": {
+     "_id": "590f5eb7ec96bf2b5cdd3421",
+     "username": "Amit",
+     "user_emailid": "kaushik.shingne@sjsu.edu",
+     "user_password": "pqr",
+     "user_profilepicture_url": "https://avatars3.githubusercontent.com/u/4065884?v=3&u=a0ac43ec7cabf27ed83139f0674e0c9d46e12ea3&s=400",
+     "user_degree": "masters",
+     "user_major": "IE",
+     "__v": 0
+   },
+   "__v": 0
+ }
+]
+
+var i;
+for (i=0;i<post.length;i++)
+{
+ console.log(post[i].type);
+
+
+
+       var divInner1=document.createElement("div");
+       var divInner2=document.createElement("div");
+       var divInner3=document.createElement("div");
+       var divInner4=document.createElement("div");
+       var divInner5=document.createElement("div");
+       var divInner6=document.createElement("div");
+       var divInner7=document.createElement("div");
+       var divInner8=document.createElement("div");
+       var divInner9=document.createElement("div");
+
+       var profileImage=document.createElement("img");
+
+       var userName=document.createElement("p");
+       userName.appendChild(document.createTextNode(post[i].postedbydetails.username));
+      userName.className += " nameDateFeed";
+
+       var date=document.createElement("p");
+       date.className += " nameDateFeed1";
+       date.appendChild(document.createTextNode(post[i].dateposted));
+
+       var JobType=document.createElement("p");
+       JobType.appendChild(document.createTextNode(post[i].type));
+
+       var description=document.createElement("p");
+       description.appendChild(document.createTextNode(post[i].description));
+
+       var loc=document.createElement("p");
+       loc.appendChild(document.createTextNode(post[i].location));
+
+       // var JobType=document.createElement("p");
+
+
+
+
+
+       profileImage.className += " img-responsive";
+       profileImage.src=post[i].postedbydetails.user_profilepicture_url;
+       divInner3.appendChild(userName);
+       divInner3.appendChild(date);
+       divInner4.appendChild(divInner3);
+       divInner5.appendChild(profileImage);
+       divInner5.appendChild(divInner4);
+       divInner5.className += " col-md-12";
+       divInner5.className += " pp";
+       divInner6.appendChild(divInner5);
+       divInner6.className += " row";
+
+
+       divInner1.appendChild(description);
+       divInner1.appendChild(loc);
+       divInner1.appendChild(JobType);
+       divInner1.className += " col-sm-12";
+       divInner2.appendChild(divInner1);
+       divInner2.className += " row";
+       divInner2.className += " feed1";
+
+
+
+       divInner7.appendChild(divInner6);
+       divInner7.appendChild(divInner2);
+
+       divInner7.className += " col-md-11";
+       divInner7.className += " feed";
+
+
+
+       var like=document.createElement("a");
+       var share=document.createElement("a");
+       like.className =+ " btn3";
+       share.className =+ " btn3";
+
+       divInner8.appendChild(like);
+       divInner8.appendChild(share);
+       divInner8.className += " col-md-12";
+       divInner8.className += " mar20";
+       divInner8.className += " nopad";
+
+
+       var like=document.getElementById('like');
+       var share=document.getElementById('share');
+  
+       divInner8.appendChild(like);
+       divInner8.appendChild(share);
+
+       divInner9.appendChild(divInner7);
+       divInner9.appendChild(divInner8);
+
+       divInner9.className += " row";
+       divInner9.className += " mar30";
+
+       document.getElementById('postFeedDisplay').insertBefore(divInner9,document.getElementById('postFeedDisplay').firstChild);
+
+
+}
+
+   </script>
+
+
+
+
+
+ </body>
 </html>

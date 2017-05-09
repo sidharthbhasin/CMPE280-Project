@@ -8,10 +8,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/accomodation.css" rel="stylesheet" type="text/css">
-    
+    <script src="js/accomodation.js"></script>
+
 </head>
   
 <body style="color: black">    
@@ -96,77 +96,70 @@
         
         
         <!--newsfeed-->
-        <div class="col-md-7 marleft2 mar40 newclass">
-            <div id="map"></div>
+        <div class="col-md-9 marleft2 mar40 newclass">
+
+          <div class="row">
+            <div class="col-md-9" id="map"></div>
             
+            <div class="col-md-2">
+            <form>
+              <label class="col-form-label">Post a new Job...</label>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Title..." required>
+              </div>
+
+              <div class="row form-group">
+                    <select class="form-control">
+                      <option>TA</option>
+                      <option>RA</option>
+                      <option>Cafeteria</option>
+                      <option>Adminstration</option>
+                    </select>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Description..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Location..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Contact Email/Phone Number..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Contact URL..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Posted On..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Department..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Pay Rate..." required>
+              </div>
+
+              <div class="form-group row">
+                  <button type="submit" class="col-sm-5 btn btn-primary">Submit</button>
+                  <label class="col-sm-1 col-form-label"></label>
+
+                  <button type="cancel" class=" col-sm-4 btn btn-danger">Reset</button>                    
+              </div>
+               
+            </form>
+            </div>
+          </div>
         </div>
-
-
         <!--newsfeed-->
-        
-        <div class="col-md-2 marleft2 mar40">
-            <div class="row trends"></div>
-
-        </div>        
     </div>
-    <script>
-      function initMap() {
-        
-        var uluru = [[{lat: 37.542571, lng: -121.993037}, 10000000],
-                     [{lat: 37.525400, lng: -122.037764}, 3000000],
-                     [{lat: 37.587546, lng: -122.066716}, 120000000],
 
-                     [{lat: 37.587546, lng: -122.066716}, 120000000],
-                     [{lat: 37.660284, lng: -122.089396}, 5000000],
-                     [{lat: 37.492686, lng: -122.249346}, 3002000],
-
-                     [{lat: 37.007888, lng: -122.067355}, 88999090],
-                     [{lat: 37.113164, lng: -121.651485}, 88999090],
-                     [{lat: 37.638625, lng: -121.911430}, 1000000],
-
-                     [{lat: 37.594870, lng: -122.473562}, 50000],
-                     [{lat: 36.995174, lng: -121.602745}, 50000],
-
-                     [{lat: 37.753038, lng: -122.423198}, 1000000],
-
-
-                     [{lat: 37.344717, lng: -121.979666}, 1000000],
-
-                     [{lat: 37.527798, lng: -122.312989}, 300000], 
-                     [{lat: 37.006852, lng: -122.064148}, 1000000]
-                    ];
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
-          center: uluru[12][0]
-        });
-        var marker = "";
-
-        for(var i=0;i<15;i++){
-            console.log('jsdsjd');
-            marker = new google.maps.Marker({
-              position: uluru[i][0],
-              animation: google.maps.Animation.DROP,
-              map: map
-            });
-            marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
-        }
-
-        for (i=0;i<11;i++) {
-          var circle = new google.maps.Circle({
-            strokeColor: '#64967d',
-            strokeOpacity: 0.8,
-            strokeWeight: 1,
-            fillColor: '#b0ecf4',
-            fillOpacity: 0.35,
-            map: map,
-            center: uluru[i][0],
-            radius: Math.sqrt(uluru[i][1]) * 2
-          });
-        }
-      }
-
-
-</script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcPwALh103uGlDrdPVD2xcKmA7BY5Weo&callback=initMap">
     </script>
@@ -180,5 +173,6 @@
     	  
     	  })
       </script>
+
   </body>
 </html>
