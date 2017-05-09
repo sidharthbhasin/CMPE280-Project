@@ -18,6 +18,14 @@ body{
 .nopad{
     padding:0;
 }
+.nameDateFeed{
+    width: 30%;
+    float: left;
+}
+.nameDateFeed1{
+    width: 30%;
+    float: right;
+}
 
 .mar10{margin-top:10px;}
 .mar15{margin-top:15px;}

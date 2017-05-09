@@ -148,15 +148,17 @@
                            </div>
                      </div>  
 
+
+
                    <!--status end-->
 
 
                    <!--feed-->
 
+            
+               
 
-
-
-                   <div class="row mar30">
+                   <div class="row mar30" id="postFeedDisplay">
                        <div class="col-md-11 feed">
                            <div class="row">
                                <div class="col-md-12 pp">
@@ -177,7 +179,7 @@
                        </div>
 
                        <div class="col-md-12 mar20 nopad">
-                           <a href="#" class="btn3">LIKE</a> <a href="#" class="btn3">SHARE</a>
+                           <a href="#" class="btn3" id="like">LIKE</a> <a href="#" class="btn3" id="share">SHARE</a>
                        </div>
                    </div>
 
@@ -361,8 +363,10 @@ for (i=0;i<post.length;i++)
 
        var userName=document.createElement("p");
        userName.appendChild(document.createTextNode(post[i].postedbydetails.username));
+      userName.className += " nameDateFeed";
 
        var date=document.createElement("p");
+       date.className += " nameDateFeed1";
        date.appendChild(document.createTextNode(post[i].dateposted));
 
        var JobType=document.createElement("p");
@@ -395,7 +399,7 @@ for (i=0;i<post.length;i++)
 
        divInner1.appendChild(description);
        divInner1.appendChild(loc);
-       // divInner1.appendChild(JobType);
+       divInner1.appendChild(JobType);
        divInner1.className += " col-sm-12";
        divInner2.appendChild(divInner1);
        divInner2.className += " row";
@@ -422,13 +426,21 @@ for (i=0;i<post.length;i++)
        divInner8.className += " mar20";
        divInner8.className += " nopad";
 
+
+       var like=document.getElementById('like');
+       var share=document.getElementById('share');
+  
+       divInner8.appendChild(like);
+       divInner8.appendChild(share);
+
        divInner9.appendChild(divInner7);
        divInner9.appendChild(divInner8);
 
        divInner9.className += " row";
        divInner9.className += " mar30";
 
-       document.getElementById('feedPost').insertBefore(divInner9,document.getElementById('feedPost').firstChild);
+       document.getElementById('postFeedDisplay').insertBefore(divInner9,document.getElementById('postFeedDisplay').firstChild);
+
 
 }
 
