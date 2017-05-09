@@ -11,7 +11,7 @@ var accomodationSchema = mongoose.Schema({
   lattitude : String,
   longitude : String,
   contact : String,
-  rent : String,
+  rent : 0,
   postedby : String,
   postedbydetails : {}
 });

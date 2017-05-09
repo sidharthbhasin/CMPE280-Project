@@ -13,7 +13,7 @@ var jobSchema = mongoose.Schema({
    url: String,
    dateposted : String,
    departement : String,
-   payrate : String,
+   payrate : 0,
    postedby : String,
    postedbydetails : {}
 });

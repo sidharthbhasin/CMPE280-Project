@@ -6,7 +6,7 @@ var eventSchema = mongoose.Schema({
     location : String,
     website : String,
     free_stuffs : [],
-    entryfees : String,
+    entryfees : 0,
     postedby : String,
     postedbydetails : {}
 });
