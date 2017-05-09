@@ -196,6 +196,7 @@ Highcharts.chart('containerSemiCircle', {
         type: 'pie',
         name: 'Browser share',
         innerSize: '50%',
+        //data = api;
         data: [
             ['Firefox',   10.38],
             ['IE',       56.33],
