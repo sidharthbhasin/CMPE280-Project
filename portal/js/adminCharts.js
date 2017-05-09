@@ -221,6 +221,7 @@ Highcharts.chart('containerSemiCircle', {
         type: 'pie',
         name: 'Browser share',
         innerSize: '50%',
+        //data = api;
         data: [
             ['Jobs',   v1],
             ['Events',       v2],

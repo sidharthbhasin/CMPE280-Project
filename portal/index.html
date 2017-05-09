@@ -107,9 +107,10 @@
                           
                     <h2>Create an acount<br>It's free and always will be</h2>
                          
-                    <form>
-                        <input type="email" name="emailsignup" id="userid" class="inp2 mar20" placeholder="email">
-                        <input id="password" type="password" name="passsignup" class="inp2 mar20" placeholder="password" oninput="checkPassword()" required>
+                    <form method="post" action="/v1/users">
+                        <input type="text" name="username" id="userid" class="inp2 mar20" placeholder="user name">
+                        <input type="email" name="user_emailid"  class="inp2 mar20" placeholder="email">
+                        <input id="password" type="password" name="user_password" class="inp2 mar20" placeholder="password" oninput="checkPassword()" required>
                        <div id="b"><img src="img/checkMark.png" class="checkmark1" id="checkmark1"></div>
                        <input type="password" name="conpasssignup" class="inp2 mar20" placeholder="confirm password" required id="passwordVerify" oninput="Verify()">
                        <div id="b"> <img src="img/wrong.png" class="checkmarkDisplay" id="NotVerified">
