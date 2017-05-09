@@ -18,7 +18,7 @@
 .footer {
 	/*background: #EDEFF1;*/
 	 /*background: #0055a2;*/
-	 background: #4267b2;
+	 background: #62C192;
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -135,7 +135,7 @@
 }
 .footer-bottom {
 	/*background: #E3E3E3;*/
-	background:#0055a2;
+	background:#62C192;
 	border-top: 1px solid #DDDDDD;
 	padding-top: 10px;
 	padding-bottom: 10px;
