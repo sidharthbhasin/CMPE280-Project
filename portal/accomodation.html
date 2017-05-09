@@ -98,69 +98,68 @@
         <!--newsfeed-->
         <div class="col-md-9 marleft2 mar40 newclass">
 
-          <div class="row" style="margin-left: 5%">
+          <div class="row">
+            <div class="col-md-9" id="map"></div>
+            
+            <div class="col-md-2">
+            <form>
+              <label class="col-form-label">Post a new Job...</label>
 
-            <form action="/hms/accommodations" method="GET">            
-              <div class="input-group pull-right" style="margin-right: 8%">
-                 <input type="text" class="form-control" placeholder="Search for post" id="txtSearch"/>
-                 <div class="input-group-btn pull-right">
-                      
-                 </div>
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Title..." required>
               </div>
+
+              <div class="row form-group">
+                    <select class="form-control">
+                      <option>TA</option>
+                      <option>RA</option>
+                      <option>Cafeteria</option>
+                      <option>Adminstration</option>
+                    </select>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Description..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Job Location..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Contact Email/Phone Number..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Contact URL..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Posted On..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Department..." required>
+              </div>
+
+              <div class="row form-group">
+                <input class="form-control" type="text" placeholder = "Pay Rate..." required>
+              </div>
+
+              <div class="form-group row">
+                  <button type="submit" class="col-sm-5 btn btn-primary">Submit</button>
+                  <label class="col-sm-1 col-form-label"></label>
+
+                  <button type="cancel" class=" col-sm-4 btn btn-danger">Reset</button>                    
+              </div>
+               
             </form>
-
-            <div class="row" >
-                <textarea class="status" placeholder="Say Something...."></textarea>
             </div>
-
-            <div class="row">
-                Drag and drop you image here
-                <article>
-                  <div id="holderSection"> 
-
-                    <div id="innerHolder" style="color: black;padding: 5px; float: left;width: 20%;">
-                            <img src="" class="imgSize" id="uploadImg">
-                    </div> 
-                    <div id="innerHolder1" style="color: black;padding: 5px; float: left;width: 20%;">
-                            <img src="" class="imgSize" id="uploadImg">
-                    </div> 
-                    <div id="innerHolder2" style="color: black;padding: 5px; float: left;width: 20%;">
-                            <img src="" class="imgSize" id="uploadImg">
-                    </div> 
-                    <div id="innerHolder3" style="color: black;padding: 5px; float: left;width: 20%;">
-                            <img src="" class="imgSize" id="uploadImg">
-                    </div> 
-                    <div id="innerHolder4" style="color: black;padding: 5px; float: left;width: 20%;">
-                            <img src="" class="imgSize" id="uploadImg">
-                    </div> 
-                  </div>      
-                </article>
-              </div>
-            </div>
-                      
-            <div class="row">
-
-              <input type="submit" class="btn2 mar20" >
-
-                <div class="fileUpload btn btn2">
-                    <span>Upload Image</span>
-                    <input type="file" onchange="previewFile()" class="upload" value="Upload image" />
-                </div>
-            </div>  
-            <div id="map"></div>
           </div>
         </div>
-
-
         <!--newsfeed-->
-        
-             
     </div>
-    <script>
-      
 
-
-</script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcPwALh103uGlDrdPVD2xcKmA7BY5Weo&callback=initMap">
     </script>
@@ -174,5 +173,6 @@
     	  
     	  })
       </script>
+
   </body>
 </html>
