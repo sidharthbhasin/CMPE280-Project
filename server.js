@@ -414,7 +414,9 @@ app.delete('/v1/accomodations/:acmdid', function(req, res){
 // ANALYTICS API v1.0.0
 
 app.get('/v1/analytics/postcounts', function(req, res){
+     console.log("Req received");
      var counts = {};
+     res.setHeader('Access-Control-Allow-Origin', '*');
      Event.find({}, function(e1, es){
           counts.events = es.length;
           Job.find({}, function(e2, jb){
