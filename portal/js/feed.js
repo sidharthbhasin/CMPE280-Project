@@ -87,6 +87,8 @@ console.log(newData.postedby);
    "dateposted": "07.07.2017",
    "departement": "Computer Science",
    "payrate": "15",
+      "like": 2,
+   "dislike": -1,
    "postedby": "590f5eb7ec96bf2b5cdd3421",
    "postedbydetails": {
      "_id": "590f5eb7ec96bf2b5cdd3421",
@@ -111,6 +113,8 @@ console.log(newData.postedby);
    "dateposted": "08.07.2017",
    "departement": "SE",
    "payrate": "5",
+   "like": 2,
+   "dislike": -1,
    "postedby": "590f5eb7ec96bf2b5cdd3421",
    "postedbydetails": {
      "_id": "590f5eb7ec96bf2b5cdd3421",
@@ -126,7 +130,7 @@ console.log(newData.postedby);
  },
  {
    "_id": "59111edc5d017b13ec7302c7",
-   "type": "ISA",
+   "type": "THIRD",
    "title": "Grading assistant for Prof Ranjan",
    "description": "Apply only if you have taken the coures",
    "location": "180",
@@ -135,6 +139,8 @@ console.log(newData.postedby);
    "dateposted": "09.07.2017",
    "departement": "SE",
    "payrate": "5",
+   "like": 2,
+   "dislike": -1,
    "postedby": "590f5eb7ec96bf2b5cdd3421",
    "postedbydetails": {
      "_id": "590f5eb7ec96bf2b5cdd3421",
@@ -151,6 +157,7 @@ console.log(newData.postedby);
 ]
 
 var i;
+var like = [], share = [];
 for (i=0;i<post.length;i++)
 {
  console.log(post[i].type);
@@ -250,24 +257,40 @@ for (i=0;i<post.length;i++)
        // divInner8.className += " nopad";
 
 
-       var like=document.createElement('a');
-       var linkText = document.createTextNode("LIKE");
-       like.appendChild(linkText);
-       like.title = "my title text";
-       like.href = "http://example.com";
-       like.className += " btn3";
+       like[i]=document.createElement('i');
+       like[i].className += " fa fa-thumbs-up fa-lg";
+       linkText = document.createTextNode("  "+post[i].like);
+       like[i].appendChild(linkText);
+       like[i].style.padding = "20px";
+       like[i].style.paddingTop = "2px";
+       like[i].style.color = "#62C192";
+
+       //like.href = "http://example.com";
+       //like.className += " btn3";
+       
+       // share = dislike
+       share[i]=document.createElement('i');
+       share[i].className += " fa fa-thumbs-down fa-lg";
+       linkText = document.createTextNode("  "+post[i].dislike);
+       share[i].appendChild(linkText);
+       share[i].style.padding = "20px";
+       share[i].style.color = "#62C192";
+       share[i].style.paddingTop = "2px";
        
 
-       var share=document.createElement('a');
-       linkText = document.createTextNode("SHARE");
-       share.appendChild(linkText);
-       share.title = "my title text";
-       share.href = "http://example.com";
-       share.className += " btn3";
+       like[i].addEventListener("click", function(){
+          console.log("inner "+like[i].innerHTML);
+          like.innerHTML = "   "+(parseInt(like[i].innerHTML)  + 1);
+       });
+
+       share[i].addEventListener("click", function(){
+          console.log("inner "+share[i].innerHTML);
+          share.innerHTML = "   "+(parseInt(share[i].innerHTML)  - 1);
        
+       });
   
-       divInner8.appendChild(like);
-       divInner8.appendChild(share);
+       divInner8.appendChild(like[i]);
+       divInner8.appendChild(share[i]);
 
        divInner9.appendChild(divInner7);
        divInner9.appendChild(divInner8);
