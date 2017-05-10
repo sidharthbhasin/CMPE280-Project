@@ -202,6 +202,7 @@ for (i=0;i<post.length;i++)
 
 
        profileImage.className += " img-responsive";
+       profileImage.className += " rounder";
        profileImage.src=post[i].postedbydetails.user_profilepicture_url;
        divInner3.appendChild(userName);
        divInner3.appendChild(date);
