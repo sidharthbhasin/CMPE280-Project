@@ -141,13 +141,38 @@ app.post('/v1/users/:user_emailid/login', function(req, res){
       });
   });
 
+  // get my jobs
+  app.get('/v1/users/:userid/jobs', function(req, res){
+     Job.find({postedby:req.params.userid}, function(err, jobs){
+       if(err){res.status(404).send('{ "message" : "Unable to fetch jobs"}');}
+       else
+         res.status(401).send(jobs);
+     });
+  });
+  // get my events
+  app.get('/v1/users/:userid/events', function(req, res){
+     Event.find({postedby:req.params.userid}, function(err, events){
+       if(err){res.status(404).send('{ "message" : "Unable to fetch events"}');}
+       else
+         res.status(401).send(events);
+     });
+  });
+
+  // get my accomodations
+  app.get('/v1/users/:userid/accomodations', function(req, res){
+     Accomodation.find({postedby:req.params.userid}, function(err, as){
+       if(err){res.status(404).send('{ "message" : "Unable to fetch accomodations"}');}
+       else
+         res.status(401).send(as);
+     });
+  });
+
 // ******* user controller ends here ******
 // var job_controller = require('./controllers/JobController.js');
 // ******** job controller starts here *****
 
   var bodyParser = require('body-parser');
   var jsonParser = bodyParser.json();
-
   var mongoose = require('mongoose');
   var jobSchema = require('./models/Job.js');
   var Job = mongoose.model('Job', jobSchema);
@@ -415,9 +440,7 @@ app.delete('/v1/accomodations/:acmdid', function(req, res){
 
 // get no of posts for each category
 app.get('/v1/analytics/postcounts', function(req, res){
-     console.log("Req received");
      var counts = {};
-     res.setHeader('Access-Control-Allow-Origin', '*');
      Event.find({}, function(e1, es){
           counts.events = es.length;
           Job.find({}, function(e2, jb){
