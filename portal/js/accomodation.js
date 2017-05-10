@@ -1,10 +1,81 @@
 
 
+function showPlaces(place){
+   var data = document.getElementById(place);
+   
+    var opt = {
+        types : ['address']
+    };
+    var lat, lon;
+    autocomplete = new google.maps.places.Autocomplete(inp, opt);
+    autocomplete.addListener('place_changed', function(){
+        
+        var crd = autocomplete.getPlace().geometry.location;
+        lat = crd.lat();
+        lon = crd.lng();
+        localStorage.setItem("lat", lat);
+        localStorage.setItem("lon", lon);
+        console.log("Lat - " + lat + " Long - " + lon );
+    });
+}
+
+
+
+function validate(){
+  if(document.getElementById("tit").value == "" ||
+    document.getElementById("type").value == "" ||
+    document.getElementById("inp").value == "" ||
+    document.getElementById("prefer").value == "" ||
+    document.getElementById("date").value == "" || 
+    document.getElementById("fac").value == "" || 
+    document.getElementById("vacan").value == "" || 
+    document.getElementById("con").value == "" || 
+    document.getElementById("rent").value == "" ) {
+    console.log("iinside if validate");
+    return true;
+  }
+  else{
+    addplace();
+    return false;
+  }
+}
+
+function addplace(){
+  console.log("inside addplace");
+  var newData = {};
+  newData.type = document.getElementById("type").value;
+  newData.vacancies = document.getElementById("vacan").value;
+  newData.apartment = document.getElementById("tit").value;
+  newData.address = document.getElementById("inp").value;
+  newData.preference = document.getElementById("prefer").value;
+  newData.startdate = document.getElementById("date").value;
+  newData.facilities = document.getElementById("fac").value;
+  newData.contact = document.getElementById("con").value;
+  newData.rent = document.getElementById("rent").value;
+  newData.lat = localStorage.getItem("lat");
+  newData.lon = localStorage.getItem("lon");
+
+  console.log(newData.type);
+  console.log(newData.vacancies);
+  console.log(newData.apartment);
+  console.log(newData.address);
+  console.log(newData.preference);
+  console.log(newData.startdate);
+  console.log(newData.facilities);
+  console.log(newData.contact);
+  console.log(newData.rent);
+  console.log(newData.lat);
+  console.log(newData.lon);
+
+  // call post api
+  // then page will reload
+}
+
+
 function initMap() {
         
 		var data = getData();
 
-       
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
           center: {lat: 37.344717, lng: -121.979666}
@@ -17,14 +88,13 @@ function initMap() {
             '<h3>Details</h3>'+
             '<b>Type</b>: ' + data[i].type + '</b> '+
             '<b>Vacancies</b>: ' + data[i].vacancies + '</b><br>'+
-            '<b>Vacancies</b>: ' + data[i].type + '</b>  '+
-            '<b>Preference</b>: ' + data[i].preference + '</b><br>'+
-            '<b>Start Date</b>: ' + data[i].startdate + '</b>  '+
-            '<b>Facilities</b>: ' + data[i].facilities + '</b><br>'+
-            '<b>Apartment</b>: ' + data[i].apartment + '</b>  '+
-            '<b>Address</b>: ' + data[i].address + '</b><br>'+
-            '<b>Contact</b>: ' + data[i].contact + '</b> '+
-            '<b>Rent</b>: ' + data[i].contact + '</b>';
+            '<b>Preference</b>: ' + data[i].preference + '</b>'+
+            '<b>Start Date</b>: ' + data[i].startdate + '</b><br>  '+
+            '<b>Facilities</b>: ' + data[i].facilities + '</b>  '+
+            '<b>Apartment</b>: ' + data[i].apartment + '</b> <br> '+
+            '<b>Address</b>: ' + data[i].address + '</b><br>   '+
+            '<b>Contact</b>: ' + data[i].contact + '</b><br>'+
+            '<b>Rent</b>: ' + data[i].rent + '</b>';
             
             var locat  = {lat: parseInt(data[i].lattitude), lng: parseInt(data[i].longitude)};
             console.log("type of "+typeof(data[i].lattitude));

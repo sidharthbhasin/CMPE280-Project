@@ -11,6 +11,10 @@ body{
     padding-bottom:30px;
 }
 
+.lbl{
+    padding-left: 0;
+    margin-left: 0;
+}
 .loginrow img{
     width:100px;
 }

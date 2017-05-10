@@ -103,14 +103,14 @@
             
             <div class="col-md-2">
             <form>
-              <label class="col-form-label">Post a new Job...</label>
+              <label class="col-form-label">Post a new Vacancy...</label>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Job Title..." required>
+                <input class="form-control" type="text" placeholder = "Apartment Title..." id="tit" required>
               </div>
 
               <div class="row form-group">
-                    <select class="form-control">
+                    <select class="form-control" id="type">
                       <option>Temporary</option>
                       <option>Permanent</option>
                       <option>Cafeteria</option>
@@ -118,36 +118,36 @@
                     </select>
               </div>
 
-              <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Job Description..." required>
+              <div class="row form-group" id="add">
+                <input class="form-control" id="inp" type="text" onfocus="showPlaces(this.id)" placeholder = "Address..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Job Location..." required>
+                <input class="form-control" type="text" id="prefer" placeholder = "Preference..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Contact Email/Phone Number..." required>
+                <input class="form-control" type="text" id="date" placeholder = "Start Date..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Contact URL..." required>
+                <input class="form-control" type="text" id="fac" placeholder = "Facilities..." required>
+              </div>
+
+               <div class="row form-group">
+                <input class="form-control" type="text" id="vacan" placeholder = "Vacancies..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Posted On..." required>
+                <input class="form-control" type="text" id="con" placeholder = "Contact..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Department..." required>
-              </div>
-
-              <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Pay Rate..." required>
+                <input class="form-control" type="text" id="rent" placeholder = "Rent..." required>
               </div>
 
               <div class="form-group row">
-                  <button type="submit" class="col-sm-5 btn btn-primary">Submit</button>
+                  <button type="submit" class="col-sm-5 btn btn-primary" onclick="return validate()">Submit</button>
                   <label class="col-sm-1 col-form-label"></label>
 
                   <button type="cancel" class=" col-sm-4 btn btn-danger">Reset</button>                    
@@ -161,7 +161,7 @@
     </div>
 
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcPwALh103uGlDrdPVD2xcKmA7BY5Weo&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcPwALh103uGlDrdPVD2xcKmA7BY5Weo&callback=initMap&libraries=places">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
