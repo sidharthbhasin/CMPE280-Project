@@ -2,6 +2,7 @@
 /* CSS Document */
 body{
     font-family: 'Karla', sans-serif;
+    background-color: #F2F4F3;
 }
 
 .loginrow{
@@ -26,6 +27,12 @@ body{
     float: right;
 }
 
+
+.forgot{
+    height: 250px;
+    background-color: white;
+    margin-top: 50px;
+}
 
 
 .mar10{margin-top:10px;}
@@ -203,7 +210,6 @@ body{
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-color: #F2F4F3;
- 
 }
 
 .form-control:focus {

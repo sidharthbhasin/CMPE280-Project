@@ -49,7 +49,7 @@
                                         <input type="submit" value="Sign in" class="btn1">
                                     </div>
                                     <div class="col-md-2 forgot">
-                                        <a href="#">Forgot Password?</a>
+                                        <a href="forrgotpassword.html">Forgot Password?</a>
                                     </div>
                                 </div>
                             </form>
@@ -108,8 +108,8 @@
                     <h2>Create an acount<br>It's free and always will be</h2>
                          
                     <form method="post" action="/v1/users">
-                        <input type="text" name="username" id="userid" class="inp2 mar20" placeholder="user name">
-                        <input type="email" name="user_emailid"  class="inp2 mar20" placeholder="email">
+                        <input type="text" name="username" id="userid" class="inp2 mar20" placeholder="user name" required>
+                        <input type="email" name="user_emailid"  class="inp2 mar20" placeholder="email" required>
                         <input id="password" type="password" name="user_password" class="inp2 mar20" placeholder="password" oninput="checkPassword()" required>
                        <div id="b"><img src="img/checkMark.png" class="checkmark1" id="checkmark1"></div>
                        <input type="password" name="conpasssignup" class="inp2 mar20" placeholder="confirm password" required id="passwordVerify" oninput="Verify()">
