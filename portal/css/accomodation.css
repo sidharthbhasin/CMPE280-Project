@@ -18,6 +18,28 @@ body{
 .loginrow img{
     width:100px;
 }
+.form-control:focus {
+  border-color: #62C192;
+  box-shadow: #62C192;
+}
+
+.btn-primary{
+    background-color: #62C192;
+    border-color: #62C192;
+}
+.btn-primary:hover{
+    background-color: #62C192;
+    border-color: #62C192;
+}
+
+.no-border{
+    border: 0;
+    box-shadow: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #F2F4F3;
+ 
+}
 
 .phonenv, .phnav{
     display:none;

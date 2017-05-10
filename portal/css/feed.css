@@ -26,6 +26,8 @@ body{
     float: right;
 }
 
+
+
 .mar10{margin-top:10px;}
 .mar15{margin-top:15px;}
 .mar20{margin-top:20px;}
@@ -164,6 +166,15 @@ body{
     padding: 10px; 
 }
 
+.btn-primary{
+    background-color: #62C192;
+    border-color: #62C192;
+}
+.btn-primary:hover{
+    background-color: #62C192;
+    border-color: #62C192;
+}
+
 .btn3{
     border:1px solid #62C192;
     padding:8px 5%;
@@ -186,6 +197,19 @@ body{
     font-size:14px;
 }
 
+.no-border{
+    border: 0;
+    box-shadow: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #F2F4F3;
+ 
+}
+
+.form-control:focus {
+  border-color: #62C192;
+  box-shadow: #62C192;
+}
 .btn2{
     /*background:#62C192;*/
     background: #62C192;
@@ -204,6 +228,11 @@ body{
 }
 .phonenv, .phnav{
     display:none;
+}
+
+
+
+.formm{
 }
 
 .trends{

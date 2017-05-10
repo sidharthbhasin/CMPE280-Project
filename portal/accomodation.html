@@ -106,11 +106,11 @@
               <label class="col-form-label">Post a new Vacancy...</label>
 
               <div class="row form-group">
-                <input class="form-control" type="text" placeholder = "Apartment Title..." id="tit" required>
+                <input class="form-control no-border" type="text" placeholder = "Apartment Title..." id="tit" required>
               </div>
 
               <div class="row form-group">
-                    <select class="form-control" id="type">
+                    <select class="form-control no-border" id="type">
                       <option>Temporary</option>
                       <option>Permanent</option>
                       <option>Cafeteria</option>
@@ -119,38 +119,37 @@
               </div>
 
               <div class="row form-group" id="add">
-                <input class="form-control" id="inp" type="text" onfocus="showPlaces(this.id)" placeholder = "Address..." required>
+                <input class="form-control no-border" id="inp" type="text" onfocus="showPlaces(this.id)" placeholder = "Address..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" id="prefer" placeholder = "Preference..." required>
+                <input class="form-control no-border" type="text" id="prefer" placeholder = "Preference..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" id="date" placeholder = "Start Date..." required>
+                <input class="form-control no-border" type="text" id="date" placeholder = "Start Date..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" id="fac" placeholder = "Facilities..." required>
+                <input class="form-control no-border" type="text" id="fac" placeholder = "Facilities..." required>
               </div>
 
                <div class="row form-group">
-                <input class="form-control" type="text" id="vacan" placeholder = "Vacancies..." required>
+                <input class="form-control no-border" type="text" id="vacan" placeholder = "Vacancies..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" id="con" placeholder = "Contact..." required>
+                <input class="form-control no-border" type="text" id="con" placeholder = "Contact..." required>
               </div>
 
               <div class="row form-group">
-                <input class="form-control" type="text" id="rent" placeholder = "Rent..." required>
+                <input class="form-control no-border" type="text" id="rent" placeholder = "Rent..." required>
               </div>
 
               <div class="form-group row">
                   <button type="submit" class="col-sm-5 btn btn-primary" onclick="return validate()">Submit</button>
-                  <label class="col-sm-1 col-form-label"></label>
-
-                  <button type="cancel" class=" col-sm-4 btn btn-danger">Reset</button>                    
+                  
+                  <button type="reset" class=" col-sm-5 btn btn-danger">Reset</button>                    
               </div>
                
             </form>
