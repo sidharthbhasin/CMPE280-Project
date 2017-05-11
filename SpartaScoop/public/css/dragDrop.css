@@ -1,0 +1,37 @@
+
+article{
+	width: 100%;
+	margin: 0px auto;
+	background-color: white;
+}
+#holderSection { 
+	border: 1px solid #ccc; 
+	width: 90%; 
+	min-height: 30px;
+	/*margin: 20px auto;*/
+	float: left;
+}
+#holderSection.hover { 
+	border: 10px dashed #0c0; 
+}	
+#holderSection img { 
+	display: block;
+	margin: 10px auto; 
+}
+#holderSection p { 
+	margin: 10px; 
+	font-size: 14px; }
+
+.fail { background: #c00; padding: 2px; color: #fff; }
+.hidden { display: none !important;}
+#details{
+	width: 100%;
+	margin: 0 auto;
+	font-size: 120%;
+
+}
+
+.imgSize{
+	max-height: 60px; 
+	max-width: 60px;
+}
