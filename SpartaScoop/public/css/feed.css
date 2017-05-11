@@ -139,8 +139,10 @@ body{
 
 .nvv ul li a{
     color:#fff;
-    font-size:11px;
+    /*font-size:11px;*/
     letter-spacing:1px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .marleft2{

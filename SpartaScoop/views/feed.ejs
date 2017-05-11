@@ -40,7 +40,7 @@
         <div class="container">
 
             <div class="col-md-3 col-xs-6 logo">
-                <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+                <img src="img/sparta-scoop.png">
             </div>
 
             <div class="col-xs-6 text-right phonenv">
@@ -52,33 +52,33 @@
                 </div>
             </div>
 
-            <div class="col-md-9 text-right ">
-                <!--<i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>-->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a ng-click="profile()">Profile</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">privacy</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a ng-click="logout()">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
+            <!--<div class="col-md-9 text-right ">-->
+                <!--&lt;!&ndash;<i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>&ndash;&gt;-->
+                <!--<div class="btn-group">-->
+                    <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--<i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a ng-click="profile()">Profile</a></li>-->
+                        <!--<li><a href="#">Settings</a></li>-->
+                        <!--<li><a href="#">privacy</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a ng-click="logout()">Logout</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 
     <!--phonenav-->
     <div class="row phnav text-center">
         <ul>
-            <li><p>Sidharth Bhasin</p></li>
+            <li><p>{{username}}</p></li>
             <li><a href="#" class="active">TIMELINE</a></li>
-            <li><a href="profile.html">EDIT PROFILE</a></li>
+            <li><a ng-click="profile()">EDIT PROFILE</a></li>
             <li><a href="feed.html">ON CAMPUS JOBS</a></li>
             <li><a href="marketplace.html">MARKET PLACE</a></li>
-            <li><a href="#">LOG OUT</a></li>
+            <li><a  ng-click="logout()">LOG OUT</a></li>
         </ul>
     </div>
     <!--phonenavend-->
@@ -92,16 +92,15 @@
             </div>
 
             <div class="row text-center mar20">
-                <p class="dname">Sidharth Bhasin</p>
+                <p class="dname">{{username}}</p>
             </div>
 
             <div class="row text-center nvv">
                 <ul>
                     <li><a href="#" class="active">TIMELINE</a></li>
-                    <li><a href="profile.html">EDIT PROFILE</a></li>
+                    <li><a ng-click="profile()">EDIT PROFILE</a></li>
                     <li><a href="jobs.html">ON CAMPUS JOBS</a></li>
                     <li><a href="accomodation.html">ACCOMODATION</a></li>
-                    <li><a href="marketplace.html">MARKET PLACE</a></li>
                     <li><a ng-click="logout()">LOG OUT</a></li>
                 </ul>
             </div>

@@ -7,6 +7,10 @@
 
 
 
+
+        $scope.username=sessionStorage.getItem('username');
+
+
         // var vm = this;
 
 
