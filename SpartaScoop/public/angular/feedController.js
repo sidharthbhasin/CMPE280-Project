@@ -86,7 +86,36 @@
 
                  }
              }).success(function(data) {
-                 window.location.assign("/profilefeed");
+
+                 swal({
+                     title: 'Are you sure you want to post?',
+                     text: "You won,t  be able to revert you job post!",
+                     type: 'success',
+                     showCancelButton: true,
+                     confirmButtonColor: '#3085d6',
+                     cancelButtonColor: '#d33',
+                     confirmButtonText: 'Yes, post it!'
+                 }).then(function () {
+                     swal(
+
+                         'Posted!',
+                         'Your post has been posted.',
+                         'success'
+                     )
+                     window.location.assign("/profilefeed");
+                 })
+
+                 // sleep(2)
+                 //
+                 // function sleep(seconds)
+                 // {
+                 //     var e = new Date().getTime() + (seconds * 1000);
+                 //     while (new Date().getTime() <= e) {}
+                 //
+                 // }
+                 // window.location.assign("/profilefeed");
+
+
 
              }).error(function(error) {
                  console.log("inside error");

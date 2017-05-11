@@ -90,7 +90,7 @@ app.post('/v1/users/login', function(req, res){
             if(in_pwd !== usr_pwd)
             {
                 console.log('[api] login fail');
-                return res.status(200).send('{"message":"Login failed"}');
+                return res.status(404).send('{"message":"Login failed"}');
             }
             else
             { console.log('[api] login success');

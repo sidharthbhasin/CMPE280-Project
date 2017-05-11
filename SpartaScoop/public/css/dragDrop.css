@@ -4,6 +4,26 @@ article{
 	margin: 0px auto;
 	background-color: white;
 }
+
+.disabled{
+	color: #d9534f ;
+	font-color: #d9534f ;
+}
+
+.pagination{
+	font-color: #62C192 ;
+	width:100%;
+	color: #62C192 ;
+	text-align: center;
+	padding-left: 17%;
+}
+
+.pagination li a{
+	font-color: #62C192 ;
+	color: #62C192 ;
+
+}
+
 #holderSection { 
 	border: 1px solid #ccc; 
 	width: 90%; 

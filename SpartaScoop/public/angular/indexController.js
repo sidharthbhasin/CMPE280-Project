@@ -48,16 +48,29 @@ myApp.controller("AppCtrl", function($scope,$http,$window) {
                     window.location.assign("/AdminDashboard");
 
             }).error(function (error) {
-                console.log("inside error");
-                console.log(error);
+
+
                 $scope.unexpected_error = false;
                 $scope.invalid_login = true;
                 // $window.alert("unexpected");
-                swal(
-                    'Oops...',
-                    'you are not registered!',
-                    'error'
-                )
+
+                if(error.message==="Login failed")
+                {
+                    swal(
+                        'Oops...',
+                        'Username and password did not match!',
+                        'error'
+                    )
+                }
+                else {
+                    swal(
+                        'Oops...',
+                        'You are not registered',
+                        'error'
+                    )
+                }
+
+
             });
 
         }
