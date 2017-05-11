@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Home</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <link href="css/feed.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/dragDrop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="color: black">    
+   <div class="container-fluid">
+
+
+       <div class="row loginrow" id="headerInsert">
+           <div class="container">
+
+               <div class="col-md-3 col-xs-6 logo">
+                   <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+               </div>
+
+               <div class="col-xs-6 text-right phonenv">
+                   <div class="col-xs-4 col-xs-offset-5 prp">
+                       <img src="img/guy2.svg">
+                   </div>
+                   <div class="col-xs-2  menu">
+                       <img src="img/arrow.svg">
+                   </div>
+               </div>
+
+              <div class="col-md-9 text-right ">
+                   <i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>
+                     <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
+                        </button>
+                       <ul class="dropdown-menu">
+                         <li><a href="#">Profile</a></li>
+                         <li><a href="#">Settings</a></li>
+                         <li><a href="#">privacy</a></li>
+                         <li role="separator" class="divider"></li>
+                         <li><a href="#">Logout</a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!--phonenav-->
+       <div class="row phnav text-center">
+           <ul>
+               <li><p>Sidharth Bhasin</p></li>
+               <li><a href="#" class="active">TIMELINE</a></li>
+               <li><a href="profile.html">EDIT PROFILE</a></li>
+               <li><a href="feed.html">ON CAMPUS JOBS</a></li>
+               <li><a href="marketplace.html">MARKET PLACE</a></li>
+               <li><a href="#">LOG OUT</a></li>
+           </ul>
+       </div>
+       <!--phonenavend-->
+
+
+       <!--sidebar-->
+       <div class="sideouter">
+           <div class="col-md-2 mar40 sidebar">
+               <div class="row text-center">
+                   <img class="rounder" src="img/guy2.svg">
+               </div>
+
+               <div class="row text-center mar20">
+                   <p class="dname">Sidharth Bhasin</p>
+               </div>
+
+               <div class="row text-center nvv">
+                   <ul>
+                       <li><a href="#" class="active">TIMELINE</a></li>
+                       <li><a href="profile.html">EDIT PROFILE</a></li>
+                       <li><a href="jobs.html">ON CAMPUS JOBS</a></li>
+                       <li><a href="accomodation.html">ACCOMODATION</a></li>
+                       <li><a href="marketplace.html">MARKET PLACE</a></li>
+                       <li><a href="#">LOG OUT</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+       <!--sidebar end-->
+
+
+       <!--newsfeed-->
+            <div class="floater">
+               <div class="col-md-7 marleft2 mar50 newclass" id="feedPost">
+
+                   <!--status-->
+                   <div class="row">
+
+                     <form action="/hms/accommodations" method="GET">            
+                       <div class="input-group pull-right bar">
+                          <input type="text" class="form-control srch  no-border" placeholder="Search for post" id="txtSearch"/>
+                          <div class="input-group-btn pull-right"></div>
+                       </div>
+                    </form>
+                   </div>
+
+                   <!--status end-->
+
+
+                   <!--feed-->
+
+                   <div class="row mar30" id="postFeedDisplay">
+                       <div class="col-md-11 end">
+                           NO MORE POSTS
+                       </div>
+                   </div>
+               </div>
+
+
+           <!--newsfeed-->
+
+              <div class="col-md-2 mar40 formm">
+                <form>
+                  <label class="col-form-label textt">Post a new Job...</label>
+                  <div class="row form-group">
+                    <input class="form-control no-border" type="text" id="tit" placeholder = "Job Title..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <select class="form-control no-border" id="type">
+                      <option>TA</option>
+                      <option>RA</option>
+                      <option>Cafeteria</option>
+                      <option>Adminstration</option>
+                    </select>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="desc" type="text" placeholder = "Job Description..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="loc" type="text" placeholder = "Job Location..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="contact" type="text" placeholder = "Contact Email/Phone Number..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="email" type="text" placeholder = "Contact Email..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="url" type="text" placeholder = "Contact URL..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="posted" type="text" placeholder = "Posted On..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="dept" type="text" placeholder = "Department..." required>
+                  </div>
+
+                  <div class="row form-group">
+                    <input class="form-control no-border" id="rate" type="text" placeholder = "Pay Rate..." required>
+                  </div>
+
+                  <div class="form-group row buttons">
+                      <button type="button" class="col-sm-5 btn btn-primary" onclick="return validate()">Submit</button>
+                      <label class="col-sm-2 col-form-label"></label>
+
+                      <button type="reset" class=" col-sm-5 btn btn-danger">Reset</button>                    
+                  </div>
+                </form>
+              </div>
+          </div>  
+   </div>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/feed.js"></script>
+   <script src="js/config.js"></script>
+    <script>
+     $(document).ready(function(){
+         $('.menu').click(function(){
+             $('.phnav').slideToggle();
+             })
+
+         })
+   </script>
+ </body>
+</html>
