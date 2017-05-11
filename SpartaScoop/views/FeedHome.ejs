@@ -22,7 +22,7 @@
         <div class="container">
 
             <div class="col-md-3 col-xs-6 logo">
-                <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+                <img src="img/sparta-scoop.png" style="width: 150px;">
             </div>
 
             <div class="col-xs-6 text-right phonenv">
@@ -118,40 +118,40 @@
 
 
 
-                        <!--<h1>AngularJS - Pagination Example with logic like Google</h1>-->
+            <!--<h1>AngularJS - Pagination Example with logic like Google</h1>-->
 
-                        <!-- items being paged -->
-                        <!--<div ng-repeat="item in dummyItems">Item {{item}}</div>-->
+            <!-- items being paged -->
+            <!--<div ng-repeat="item in dummyItems">Item {{item}}</div>-->
 
-                        <div class="row mar30 feedSearch" id="postFeedDisplay" ng-repeat="countProfile in items">
+            <div class="row mar30 feedSearch" id="postFeedDisplay" ng-repeat="countProfile in items">
 
-                            <div id="1" class="col-md-11 feed">
-                                <div  id="2" class="row">
-                                    <div  id="3" class="col-md-12 pp">
-                                        <img  id="4" class="img-responsive " ng-src={{countProfile.postedbydetails.user_profilepicture_url}}>
-                                        <div  id="5" >
-                                            <p id="username" class="username" style="width: 30%;float: left">{{countProfile.postedbydetails.username}}</p>
-                                            <p id="dateposted" class="dateposted" style="width: 30%;float: right;">{{countProfile.dateposted}}</p></div>
-                                    </div>
-                                </div>
-
-
-                                <div  id="6" class="row feed1">
-                                    <div   id="7" class="col-sm-12">
-                                        <p id="type" class="type">{{countProfile.type}}</p>
-                                        <p id="description" class="description">{{countProfile.description}}</p>
-                                        <p id="location" class="location">{{countProfile.location}}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-md-12 mar20 nopad">
-                                <a href="#" class="btn3" id="like">LIKE</a> <a href="#" class="btn3" id="share">SHARE</a>
-                            </div>
-
+                <div id="1" class="col-md-11 feed">
+                    <div  id="2" class="row">
+                        <div  id="3" class="col-md-12 pp">
+                            <img  id="4" class="img-responsive " ng-src={{countProfile.postedbydetails.user_profilepicture_url}}>
+                            <div  id="5" >
+                                <p id="username" class="username" style="width: 30%;float: left">{{countProfile.postedbydetails.username}}</p>
+                                <p id="dateposted" class="dateposted" style="width: 30%;float: right;">{{countProfile.dateposted}}</p></div>
                         </div>
+                    </div>
+
+
+                    <div  id="6" class="row feed1">
+                        <div   id="7" class="col-sm-12">
+                            <p id="type" class="type">{{countProfile.type}}</p>
+                            <p id="description" class="description">{{countProfile.description}}</p>
+                            <p id="location" class="location">{{countProfile.location}}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12 mar20 nopad">
+                    <a href="#" class="btn3" id="like">LIKE</a> <a href="#" class="btn3" id="share">SHARE</a>
+                </div>
+
+            </div>
 
 
 
@@ -182,12 +182,12 @@
                 </div>
                 <hr />
                 <!--<div class="credits text-center">-->
-                    <!--<p>-->
-                        <!--<a href="http://jasonwatmore.com/post/2016/01/31/AngularJS-Pagination-Example-with-Logic-like-Google.aspx" target="_top">AngularJS - Pagination Example with logic like Google</a>-->
-                    <!--</p>-->
-                    <!--<p>-->
-                        <!--<a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>-->
-                    <!--</p>-->
+                <!--<p>-->
+                <!--<a href="http://jasonwatmore.com/post/2016/01/31/AngularJS-Pagination-Example-with-Logic-like-Google.aspx" target="_top">AngularJS - Pagination Example with logic like Google</a>-->
+                <!--</p>-->
+                <!--<p>-->
+                <!--<a href="http://jasonwatmore.com" target="_top">JasonWatmore.com</a>-->
+                <!--</p>-->
                 <!--</div>-->
             </div>
 
@@ -199,38 +199,6 @@
 
 
 
-
-
-
-
-            <!--<div class="row mar30 feedSearch" id="postFeedDisplay" ng-repeat="countProfile in post">-->
-
-                <!--<div id="1" class="col-md-11 feed">-->
-                    <!--<div  id="2" class="row">-->
-                        <!--<div  id="3" class="col-md-12 pp">-->
-                            <!--<img  id="4" class="img-responsive " ng-src={{countProfile.postedbydetails.user_profilepicture_url}}>-->
-                            <!--<div  id="5" ><p id="username" style="width: 30%;float: left">{{countProfile.postedbydetails.username}}</p>-->
-                                <!--<p id="dateposted" style="width: 30%;float: right;">{{countProfile.dateposted}}</p></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-
-                    <!--<div  id="6" class="row feed1">-->
-                        <!--<div   id="7" class="col-sm-12">-->
-                            <!--<p id="type">{{countProfile.type}}</p>-->
-                            <!--<p id="description">{{countProfile.description}}</p>-->
-                            <!--<p id="location">{{countProfile.location}}</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-
-
-                <!--<div class="col-md-12 mar20 nopad">-->
-                    <!--<a href="#" class="btn3" id="like">LIKE</a> <a href="#" class="btn3" id="share">SHARE</a>-->
-                <!--</div>-->
-
-            <!--</div>-->
 
             <div class="row mar30" id="postFeedDisplay">
                 <div class="col-md-11 end">
@@ -242,57 +210,10 @@
 
         <!--newsfeed-->
 
-        <div class="col-md-2 mar40 formm">
-            <form>
-                <label class="col-form-label textt">Post a new Job...</label>
-                <div class="row form-group">
-                    <input class="form-control no-border" type="text" ng-model="title" id="tit" placeholder = "Job Title..." required>
-                </div>
+        <div class="col-md-2 mar40 formm"  style="height:600px; border: 1px solid #C0C0C0;padding: 10px;">
+            <form >
+                <label class="col-form-label textt">Events near you...</label>
 
-                <div class="row form-group">
-                    <select class="form-control no-border" ng-model="type" id="type">
-                        <option>TA</option>
-                        <option>RA</option>
-                        <option>Cafeteria</option>
-                        <option>Adminstration</option>
-                    </select>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="desc" type="text" ng-model="description" placeholder = "Job Description..." required>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="loc" type="text" ng-model="location" placeholder = "Job Location..." required>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="contact" type="text" ng-model="email" placeholder = "Contact Email/Phone Number..." required>
-                </div>
-
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="url" type="text" ng-model="url" placeholder = "Contact URL..." required>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="posted" type="text" ng-model="dateposted" placeholder = "Posted On..." required>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="dept" type="text" ng-model="department" placeholder = "Department..." required>
-                </div>
-
-                <div class="row form-group">
-                    <input class="form-control no-border" id="rate" type="text" ng-model="payrate" placeholder = "Pay Rate..." required>
-                </div>
-
-                <div class="form-group row buttons">
-                    <button type="button" class="col-sm-5 btn btn-primary" ng-click="jobPost()">Submit</button>
-                    <label class="col-sm-2 col-form-label"></label>
-
-                    <button type="reset" class=" col-sm-5 btn btn-danger">Reset</button>
-                </div>
             </form>
         </div>
     </div>

@@ -4,23 +4,6 @@
 var myApp=angular.module("myApp", [])
 myApp.controller("AppCtrl", function($scope,$http,$window) {
 
-    //
-    // $scope.encodeImageFileAsURL=function(element) {
-    //     var file = element.files[0];
-    //     var reader = new FileReader();
-    //     reader.onloadend = function() {
-    //         console.log('RESULT', reader.result);
-    //         console.log("Helloooooooooo");
-    //       sessionStorage.setItem("imageSrc",reader.result);
-    //     }
-    //     reader.readAsDataURL(file);
-    // }
-    //
-    //
-    //
-
-
-
 
 
   $scope.addContact=function() {
@@ -142,8 +125,17 @@ myApp.controller("AppCtrl", function($scope,$http,$window) {
     }
 
 
+    $scope.forgotPassword=function() {
+        window.location.assign("/forgotPassword");
+    }
+
+
     $scope.SkipProfile=function() {
         window.location.assign("/profilefeed");
+    }
+
+    $scope.forgotpasswordDone=function() {
+        window.location.assign("/index");
     }
 
 

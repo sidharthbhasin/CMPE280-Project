@@ -9,12 +9,11 @@ var logger = new (winston.Logger)({
 });
 
 exports.redirectToHome = function(req,res) {
-	console.log(" I am going to home");
-    res.render('index', { title: 'Express' });
+    res.render('index');
 };
 
 exports.redirectToUserProfile = function(req,res) {
-    res.render('feed');
+    res.render('FeedHome');
 };
 
 exports.redirectToAdminProfile = function(req,res) {
@@ -24,3 +23,6 @@ exports.redirectToAdminProfile = function(req,res) {
 exports.redirectToProfileCompletion = function(req,res) {
     res.render('completeProfile');
 };
+exports.redirectToforgotPassword=function(req,res){
+    res.render('forgotpassword');
+}

@@ -155,19 +155,8 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
     };
 
 
+    $scope.logout=function() {
+        window.location.assign("/index");
+    }
 
-
-    // $http({
-    //     method: "GET",
-    //     url: '/v1/analytics/accomodationprices',
-    //     data: {}
-    // }).success(function (data) {
-    //     $scope.accomodationprices = data;
-    // }).error(function (error) {
-    //     console.log("inside error");
-    //     console.log(error);
-    //     $scope.unexpected_error = false;
-    //     $scope.invalid_login = true;
-    //     // $window.alert("unexpected_error");
-    // });
 });

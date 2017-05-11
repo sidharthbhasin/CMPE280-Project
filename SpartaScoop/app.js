@@ -57,6 +57,7 @@ app.get('/', home.redirectToHome);
 app.get('/index', home.redirectToHome);
 app.get('/profilefeed', home.redirectToUserProfile);
 app.get('/AdminDashboard', home.redirectToAdminProfile);
+app.get('/forgotPassword', home.redirectToforgotPassword);
 app.get('/profileCompletion', home.redirectToProfileCompletion);
 
 

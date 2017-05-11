@@ -50,13 +50,19 @@
 
         <div class="row text-center">
             <div class="col-md-5"></div>
-            <img class="col-md-3 rounder" id="defaultValue" style="margin-left: 2%" src="">
+
+            <div class="col-md-2 rounder image-upload">
+                <label for="file-input">
+                    <img class="rounder" id="defaultValue" src=""/>
+                </label>
+
+                <input id="file-input" type="file" onchange="encodeImageFileAsURL(this)"/>
+            </div>
         </div>
 
         <div class="row mar20">
             <strong>
-                <input type="file" onchange="encodeImageFileAsURL(this)" />
-                <a href="#" style="color:#286345;">Upload Photo</a>
+                <h2>Upload Photo</h2>
             </strong>
         </div>
         <div class="col-md-4"></div>
