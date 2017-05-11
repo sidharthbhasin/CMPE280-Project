@@ -78,6 +78,8 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
     }
 
 
+
+
     $http({
         method: "GET",
         url: '/v1/analytics/majorcounts',
