@@ -25,28 +25,42 @@ myApp.controller("AppCtrl", function($scope,$http,$window) {
 
     $scope.login=function() {
 
-        $http({
-            method : "POST",
-            url : '/v1/users/login',
-            data : {
-                user_emailid:$scope.email,
-                password: $scope.password
+        if ( $scope.email=== undefined) {
 
-            }
-        }).success(function(data) {
-            if(data.userType=="user")
-                window.location.assign("/profilefeed");
-            if(data.userType=="admin")
-                window.location.assign("/AdminDashboard");
+        }
+        else if( $scope.password=== undefined){
 
-        }).error(function(error) {
-            console.log("inside error");
-            console.log(error);
-            $scope.unexpected_error = false;
-            $scope.invalid_login = true;
-            $window.alert("unexpected_error");
-        });
+        }
+        else {
 
+            $http({
+                method: "POST",
+                url: '/v1/users/login',
+                data: {
+                    user_emailid: $scope.email,
+                    password: $scope.password
+
+                }
+            }).success(function (data) {
+                if (data.userType == "user")
+                    window.location.assign("/profilefeed");
+                if (data.userType == "admin")
+                    window.location.assign("/AdminDashboard");
+
+            }).error(function (error) {
+                console.log("inside error");
+                console.log(error);
+                $scope.unexpected_error = false;
+                $scope.invalid_login = true;
+                // $window.alert("unexpected");
+                swal(
+                    'Oops...',
+                    'you are not registered!',
+                    'error'
+                )
+            });
+
+        }
     }
 
     $scope.register=function() {

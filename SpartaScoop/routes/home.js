@@ -13,7 +13,7 @@ exports.redirectToHome = function(req,res) {
 };
 
 exports.redirectToUserProfile = function(req,res) {
-    res.render('FeedHome');
+    res.render('feed');
 };
 
 exports.redirectToAdminProfile = function(req,res) {

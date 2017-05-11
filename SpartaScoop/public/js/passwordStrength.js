@@ -1,7 +1,11 @@
 window.onload = function(){
         setInterval(function(){ 
             if (navigator.onLine == false) {
-                alert('You are not connected to internet');
+                swal(
+                    'The Internet?',
+                    'That thing is still around?',
+                    'question'
+                );
             } 
         }, 5000);
     }
@@ -74,7 +78,7 @@ function checkPassword() {
 		      {
 		      	var obj=document.getElementById("showingPasswordStrngth");
 		      	obj.style.display="block";
-		      	obj.style.backgroundColor = "red";
+		      	obj.style.backgroundColor = "#d9534f";
 		      	obj.innerHTML="WEAK";
 
 		      }
@@ -82,7 +86,7 @@ function checkPassword() {
 		      {
 		      	var obj=document.getElementById("showingPasswordStrngth");
 		      	obj.style.display="block";
-		      	obj.style.backgroundColor = "YELLOW";
+		      	obj.style.backgroundColor = "#f0ad4e";
 		      	obj.innerHTML="MODERATE";
 
 		      }
@@ -90,7 +94,7 @@ function checkPassword() {
 		      {
 		      	var obj=document.getElementById("showingPasswordStrngth");
 		      	obj.style.display="block";
-		      	obj.style.backgroundColor = "GREEN";
+		      	obj.style.backgroundColor = "#5cb85c";
 		      	obj.innerHTML="STRONG";
 		      	setTimeout(hidePassword, 1000)
 

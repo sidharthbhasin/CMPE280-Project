@@ -22,7 +22,7 @@ body{
     border: none;
     /*background: #5aa982;*/
     background: white;
-    width: 100%;
+    /*width: 100%;*/
     padding: 5px;
     color: black;
 	padding-left:10px;
@@ -55,12 +55,12 @@ body{
     min-height: 28px;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fff;
-  font-size:11px;
+  color: #999;
+  font-size:13px;
 }
 
 .inp2::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #999;font-size:11px;
+  color: #999;font-size:13px;
 }
 
 .absimg{
@@ -243,6 +243,7 @@ p{
     font-size:15px;
     color:#fff;
     text-decoration:none;
+    cursor:pointer;
 }
 
 .sup{
@@ -357,6 +358,32 @@ p{
     .pddeets{
         padding:0;
         margin-top:20px;
+    }
+
+    .passwordStrength {
+        display: none;
+        width: 24%;
+
+        color: #fff;
+        text-align: center;
+        border-radius: 15px;
+        position: absolute;
+        z-index: 1;
+        margin-left: 2%;
+        border:1px solid black;
+        margin-top: 20px
+
+    }
+    .footer{
+        margin-top:80px;
+        max-width:100%;
+    }
+
+    .footer-bottom{
+        margin-top:10px;
+        margin-left:8%;
+        margin-right:8%;
+        max-width:100%;
     }
 }
 

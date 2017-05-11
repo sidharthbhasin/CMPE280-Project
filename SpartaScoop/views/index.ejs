@@ -15,6 +15,8 @@
   <link rel="icon" href="img/spartans.png">
   <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="js/routing.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
 
 
 
@@ -42,16 +44,16 @@
         <div class="col-md-7 col-md-offset-2">
           <form >
             <div class="col-md-4 nopadresponsive resmar20">
-              <input type="email" name="email" id="email" class="inp" placeholder="email"   ng-model="email" onblur="valemail(this, this.value)">
+              <input type="email"  required name="email" id="email" class="inp" placeholder="email"   ng-model="email" onblur="valemail(this, this.value)">
             </div>
-            <div class="col-md-4 nopad resmar20">
-              <input type="password" name="password" id="pass" class="inp" ng-model="password" placeholder="password" onblur="validate(this)">
+            <div class="col-md-3 nopad resmar20">
+              <input type="password" required name="password" id="pass" class="inp" ng-model="password" placeholder="password" onblur="validate(this)">
             </div>
             <div class="x">
               <div class="col-md-2">
                 <input type="submit" value="Sign in"  ng-click="login()" id="signin" class="btn1">
               </div>
-              <div class="col-md-2 forgot">
+              <div class="col-md-3 forgot">
                 <a ng-click="forgotPassword()">Forgot Password?</a>
               </div>
             </div>
@@ -120,7 +122,7 @@
           <img src="img/checkMark.png" class="checkmarkDisplay" id="Verified">
           <!-- onmouseout="Verify()" -->
 
-          <input type="submit" value="Sign Up" ng-click="register()" class="btn2 mar20">
+          <input type="submit" value="Sign Up" ng-click="register()" class="btn2 mar20" style="  float: left;">
       </form>
 
       <!--  password Strength-->
@@ -178,7 +180,7 @@
 
 
 
-<footer style="margin-top: 20px; bottom: 0px;">
+<footer style="margin-top: 36px; bottom: 0px;">
   <div class="footer" id="footer">
     <div class="container">
       <div class="row">
@@ -197,7 +199,7 @@
             <li> <a href="#">Current Students </a></li>
             <li> <a href="#">Donors </a></li>
             <li> <a href="#">Faculty and Staff </a></li>
-            <li> <a href="#"> Researchers </a></li>
+            <li> <a href="#">Researchers </a></li>
 
           </ul>
         </div>

@@ -64,13 +64,25 @@ app.get('/profileCompletion', home.redirectToProfileCompletion);
 
 app.post('/v1/users/login', function(req, res){
     console.log('[api] authenticating - ' + req.body.user_emailid);
+    console.log('[api] authenticating - ' + req.body.password);
     res.setHeader('Access-Control-Allow-Origin', '*');
     console.log('[api] ' + req.body);
     User.find({user_emailid:req.body.user_emailid}, function(error, user){
 
-        var temp = JSON.parse(JSON.stringify(user));
-        if(error){res.status(404).send('{ "message" : "User not found"}');}
+
+
+        if(error){
+            res.status(404).send('{ "message" : "User not found"}');
+        }
+        else if(user.length === 0 )
+        {
+            res.status(404).send('{ "message" : "User not found"}');
+        }
         else{
+            var temp = JSON.parse(JSON.stringify(user));
+
+            console.log(temp);
+
             var in_pwd = req.body.password;
             var usr_pwd = temp[0]['user_password'];
 
