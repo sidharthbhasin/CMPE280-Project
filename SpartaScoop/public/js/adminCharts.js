@@ -1,9 +1,9 @@
 
 window.onload = function(){
-        setInterval(function(){ 
+        setInterval(function(){
             if (navigator.onLine == false) {
                 alert('You are not connected to internet');
-            } 
+            }
         }, 5000);
     }
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
             }
         },
         title: {
-            text: 'Current User Online'
+            text: 'Current Users Online'
         },
         xAxis: {
             type: 'datetime',
@@ -100,7 +100,7 @@ Highcharts.chart('containerPost', {
         text: 'Monthly Post details'
     },
     subtitle: {
-        text: 'Source: WorldClimate.com'
+        text: 'Source: Spartan-Scoop'
     },
     xAxis: {
         categories: [
@@ -122,7 +122,7 @@ Highcharts.chart('containerPost', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Rainfall (mm)'
+            text: 'Number of Posts'
         }
     },
     tooltip: {
@@ -140,19 +140,19 @@ Highcharts.chart('containerPost', {
         }
     },
     series: [{
-        name: 'Tokyo',
+        name: 'Software engineering',
         data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
     }, {
-        name: 'New York',
+        name: 'Computer Engineering',
         data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
 
     }, {
-        name: 'London',
+        name: 'Electrical Engineering',
         data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
 
     }, {
-        name: 'Berlin',
+        name: 'Mechanical Engineering',
         data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
 
     }]
@@ -275,68 +275,68 @@ Highcharts.chart('containerPost', {
 
 //Combination charts
 
-Highcharts.chart('containerCombination', {
-    title: {
-        text: 'Combination chart'
-    },
-    xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
-    },
-    labels: {
-        items: [{
-            html: 'Total fruit consumption',
-            style: {
-                left: '50px',
-                top: '18px',
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-            }
-        }]
-    },
-    series: [{
-        type: 'column',
-        name: 'Jane',
-        data: [3, 2, 1, 3, 4]
-    }, {
-        type: 'column',
-        name: 'John',
-        data: [2, 3, 5, 7, 6]
-    }, {
-        type: 'column',
-        name: 'Joe',
-        data: [4, 3, 3, 9, 0]
-    }, {
-        type: 'spline',
-        name: 'Average',
-        data: [3, 2.67, 3, 6.33, 3.33],
-        marker: {
-            lineWidth: 2,
-            lineColor: Highcharts.getOptions().colors[3],
-            fillColor: 'white'
-        }
-    }, {
-        type: 'pie',
-        name: 'Total consumption',
-        data: [{
-            name: 'Jane',
-            y: 13,
-            color: Highcharts.getOptions().colors[0] // Jane's color
-        }, {
-            name: 'John',
-            y: 23,
-            color: Highcharts.getOptions().colors[1] // John's color
-        }, {
-            name: 'Joe',
-            y: 19,
-            color: Highcharts.getOptions().colors[2] // Joe's color
-        }],
-        center: [100, 80],
-        size: 100,
-        showInLegend: false,
-        dataLabels: {
-            enabled: false
-        }
-    }]
-});
+// Highcharts.chart('containerCombination', {
+//     title: {
+//         text: 'Combination chart'
+//     },
+//     xAxis: {
+//         categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+//     },
+//     labels: {
+//         items: [{
+//             html: 'Total fruit consumption',
+//             style: {
+//                 left: '50px',
+//                 top: '18px',
+//                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+//             }
+//         }]
+//     },
+//     series: [{
+//         type: 'column',
+//         name: 'Jane',
+//         data: [3, 2, 1, 3, 4]
+//     }, {
+//         type: 'column',
+//         name: 'John',
+//         data: [2, 3, 5, 7, 6]
+//     }, {
+//         type: 'column',
+//         name: 'Joe',
+//         data: [4, 3, 3, 9, 0]
+//     }, {
+//         type: 'spline',
+//         name: 'Average',
+//         data: [3, 2.67, 3, 6.33, 3.33],
+//         marker: {
+//             lineWidth: 2,
+//             lineColor: Highcharts.getOptions().colors[3],
+//             fillColor: 'white'
+//         }
+//     }, {
+//         type: 'pie',
+//         name: 'Total consumption',
+//         data: [{
+//             name: 'Jane',
+//             y: 13,
+//             color: Highcharts.getOptions().colors[0] // Jane's color
+//         }, {
+//             name: 'John',
+//             y: 23,
+//             color: Highcharts.getOptions().colors[1] // John's color
+//         }, {
+//             name: 'Joe',
+//             y: 19,
+//             color: Highcharts.getOptions().colors[2] // Joe's color
+//         }],
+//         center: [100, 80],
+//         size: 100,
+//         showInLegend: false,
+//         dataLabels: {
+//             enabled: false
+//         }
+//     }]
+// });
 
 
 
@@ -361,8 +361,8 @@ function displayUserAnalysis(){
 }
 
 function displayUsersOnline(){
-    
-    containerAnalysis.style.display="none";
+
+    //containerAnalysis.style.display="none";
     containerOnlineObj.style.display="block";
     containerPostObj.style.display="none";
     // adminGraph2.className += " actiive";
@@ -380,15 +380,3 @@ function displayPostsMonthly(){
     adminGraph2.classList.remove("active");
     adminGraph3.classList.add("active");
 }
-
-
-
-
-
-
-
-
-
-
-
-
