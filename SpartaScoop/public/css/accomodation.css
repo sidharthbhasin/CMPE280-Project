@@ -31,9 +31,9 @@ body{
 }
 
 .active{
-    /*background:#457F5F;*/
+    background:#457F5F;
     color:black;
-    background: white;
+    /*background: white;*/
     padding:5px 10px;
 }
 .btn2{
@@ -175,13 +175,13 @@ article{
 .status::-webkit-input-placeholder{
     color:#ccc;
 }
-
 .nvv ul li a{
     color:#fff;
     font-size:11px;
     letter-spacing:1px;
+    text-decoration: none;
+    cursor: pointer;
 }
-
 .marleft2{
     margin-left:1%;
 }

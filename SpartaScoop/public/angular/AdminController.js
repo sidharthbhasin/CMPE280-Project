@@ -34,7 +34,7 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
                 plotShadow: false
             },
             title: {
-                text: 'Posts per catagory',
+                text: "Post per User",
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 40
@@ -76,6 +76,8 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
             }]
         });
     }
+
+
 
 
     $http({
@@ -158,11 +160,5 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
     $scope.logout=function() {
         window.location.assign("/index");
     }
-
-
-    $scope.profile=function() {
-        window.location.assign("/profileCompletion");
-    }
-
 
 });

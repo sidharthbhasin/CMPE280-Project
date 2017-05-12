@@ -24,7 +24,7 @@
         <div class="container">
 
             <div class="col-md-3 col-xs-6 logo">
-                <img src="img/sparta-scoop.png" style="width: 200px;height: 50px;">
+                <img src="img/sparta-scoop.png" style="width: 150px;">
             </div>
 
             <div class="col-xs-6 text-right phonenv">
@@ -44,12 +44,14 @@
     <!--phonenav-->
     <div class="row phnav text-center">
         <ul>
-            <li><p>Sidharth Bhasin</p></li>
-            <li><a href="#" class="active">TIMELINE</a></li>
-            <li><a href="profile.html">EDIT PROFILE</a></li>
-            <li><a href="#">ON CAMPUS JOBS</a></li>
-            <li><a href="marketplace.html">MARKET PLACE</a></li>
-            <li><a href="#">LOG OUT</a></li>
+            <li><p>{{username}</p></li>
+            <li><a ng-click="SpartaJob()">TIMELINE</a></li>
+            <li><a ng-click="profile()">EDIT PROFILE</a></li>
+            <li><a ng-click="SpartaJob()">ON CAMPUS JOBS</a></li>
+            <li><a class="active"  ng-click="accomodation()">ACCOMODATION</a></li>
+            <li><a ng-click="SpartaEvents()">EVENTS</a></li>
+            <li><a ng-click="logout()">LOG OUT</a></li>
+
         </ul>
     </div>
     <!--phonenavend-->
@@ -71,8 +73,8 @@
                     <li><a ng-click="SpartaJob()">TIMELINE</a></li>
                     <li><a ng-click="profile()">EDIT PROFILE</a></li>
                     <li><a ng-click="SpartaJob()">ON CAMPUS JOBS</a></li>
-                    <li><a ng-click="accomodation()">ACCOMODATION</a></li>
-                    <li><a class="active" ng-click="SpartaEvents()">Events</a></li>
+                    <li><a class="active"  ng-click="accomodation()">ACCOMODATION</a></li>
+                    <li><a ng-click="SpartaEvents()">EVENTS</a></li>
                     <li><a ng-click="logout()">LOG OUT</a></li>
 
 

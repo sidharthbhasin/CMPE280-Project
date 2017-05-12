@@ -73,12 +73,14 @@
     <!--phonenav-->
     <div class="row phnav text-center">
         <ul>
-            <li><p>{{username}}</p></li>
-            <li><a href="#" class="active">TIMELINE</a></li>
+            <li><p>{{username}</p></li>
+            <li><a ng-click="SpartaJob()">TIMELINE</a></li>
             <li><a ng-click="profile()">EDIT PROFILE</a></li>
-            <li><a href="feed.html">ON CAMPUS JOBS</a></li>
-            <li><a href="marketplace.html">MARKET PLACE</a></li>
-            <li><a  ng-click="logout()">LOG OUT</a></li>
+            <li><a ng-click="SpartaJob()">ON CAMPUS JOBS</a></li>
+            <li><a class="active"  ng-click="accomodation()">ACCOMODATION</a></li>
+            <li><a ng-click="SpartaEvents()">EVENTS</a></li>
+            <li><a ng-click="logout()">LOG OUT</a></li>
+
         </ul>
     </div>
     <!--phonenavend-->
