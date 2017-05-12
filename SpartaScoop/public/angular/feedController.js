@@ -145,6 +145,17 @@
             window.location.assign("/profileCompletion");
         }
 
+        $scope.SpartaEvents=function() {
+            window.location.assign("/SpartaEvents");
+        }
+
+        $scope.SpartaJob=function() {
+            window.location.assign("/profilefeed");
+        }
+        $scope.accomodation=function() {
+            window.location.assign("/accomodation");
+        }
+
 
      });
 

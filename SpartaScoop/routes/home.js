@@ -26,3 +26,11 @@ exports.redirectToProfileCompletion = function(req,res) {
 exports.redirectToforgotPassword=function(req,res){
     res.render('forgotpassword');
 }
+
+exports.redirectToEvents=function(req,res){
+    res.render('Events');
+}
+exports.redirectToAccomodation=function(req,res){
+    res.render('accomodation');
+}
+

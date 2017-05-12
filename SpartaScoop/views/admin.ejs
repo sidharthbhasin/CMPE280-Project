@@ -55,33 +55,39 @@
                 </div>
             </div>
 
-            <div class="col-md-9 text-right ">
-                <!--<i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>-->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <!--<li><a href="#">Profile</a></li>-->
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">privacy</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a ng-click="logout()">Logout</a></li>
-                    </ul>
-                </div>
+            <!--<div class="col-md-9 text-right ">-->
+                <!--&lt;!&ndash;<i class="fa fa-2x fa-bell" aria-hidden="true" "></i><a href="#" style="margin-right:20px;"><span class="badge">42</span></a>&ndash;&gt;-->
+                <!--<div class="btn-group">-->
+                    <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--<i class="fa fa-2x fa-user profile" aria-hidden="true"></i> <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--&lt;!&ndash;<li><a href="#">Profile</a></li>&ndash;&gt;-->
+                        <!--<li><a href="#">Settings</a></li>-->
+                        <!--<li><a href="#">privacy</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a ng-click="logout()">Logout</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
 
-            </div>
+            <!--</div>-->
 
 
         </div>
     </div>
 
-    <!--phonenav-->
+
+    <!--phonenavstart-->
+
+
     <div class="row phnav text-center">
         <ul>
-            <li><p>Amit Pandey</p></li>
-            <li><a href="#" class="active">Users Online</a></li>
-            <li><a href="profile.html">Posts</a></li>
+            <li><p>Admin</p></li>
+            <li><a ng-click="profile()">SETTING</a></li>
+            <li><a  ng-click="logout()">LOG OUT</a></li>
+            <li><a  id="adminGraph1" onclick="displayUserAnalysis()" >Analysis</a></li>
+            <li><a  id="adminGraph2" onclick="displayUsersOnline()">Online Users</a></li>
+            <li><a  id="adminGraph3" onclick="displayPostsMonthly()">Online Users</a></li>
         </ul>
     </div>
     <!--phonenavend-->
@@ -89,45 +95,92 @@
 
     <!--sidebar-->
     <div class="sideouter">
-        <div class="col-md-1 mar40 sidebar">
+        <div class="col-md-2 mar40 sidebar">
             <div class="row text-center">
-                <img src="img/amit_profile.jpg" style="border-radius: 50%;">
+                <img class="rounder" id="profileImage"  src="img/guy2.svg"  alt="user profile">
             </div>
 
             <div class="row text-center mar20">
-                <p class="dname">Amit Pandey</p>
+                <p class="dname">Admin</p>
             </div>
-            <br><br>
+
             <div class="row text-center nvv">
                 <ul>
-                    <li>
-                        <div  id="adminGraph1" onclick="displayUserAnalysis()" class="Anchor active" style=" text-decoration: none;">
-                            <i class="fa fa-4x  fa-tachometer " ></i>
-                            <br>Dashboard</span>
-                        </div>
-                    </li><br>
-                    <li>
-                        <div   id="adminGraph2" onclick="displayUsersOnline()" class="Anchor" style=" text-decoration: none;">
-                            <i class="fa fa-4x  fa-users " ></i>
-                            <br> Users Online</span>
-                        </div>
-                    </li><br>
-                    <li>
-                        <div   id="adminGraph3" onclick="displayPostsMonthly()" class="Anchor" style=" text-decoration: none;">
-                            <i class="fa fa-4x fa-bar-chart"></i>
-                            <br>Posts Analysis</span>
-                            </a>
-                    </li>
+                    <li><a class="active"  id="adminGraph1" onclick="displayUserAnalysis()" >Analysis</a></li>
+                    <li><a  id="adminGraph2" onclick="displayUsersOnline()">Online Users</a></li>
+                    <li><a  id="adminGraph3" onclick="displayPostsMonthly()">Online Users</a></li>
+                    <li><a ng-click="logout()">LOG OUT</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---->
+    <!---->
+    <!--&lt;!&ndash;phonenav&ndash;&gt;-->
+    <!--<div class="row phnav text-center">-->
+        <!--<ul>-->
+            <!--<li><p>Admin</p></li>-->
+            <!--<li><a href="#" class="active">Users Online</a></li>-->
+            <!--<li><a href="profile.html">Posts</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;phonenavend&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;sidebar&ndash;&gt;-->
+    <!--<div class="sideouter">-->
+        <!--<div class="col-md-1 mar40 sidebar">-->
+            <!--<div class="row text-center">-->
+                <!--<img src="img/guy2.svg" style="border-radius: 50%;">-->
+            <!--</div>-->
+
+            <!--<div class="row text-center mar20">-->
+                <!--<p class="dname">Admin</p>-->
+            <!--</div>-->
+            <!--<br><br>-->
+            <!--<div class="row text-center nvv">-->
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--<div  id="adminGraph1" onclick="displayUserAnalysis()" class="Anchor active" style=" text-decoration: none;">-->
+                            <!--<i class="fa fa-4x  fa-tachometer " ></i>-->
+                            <!--<br>Dashboard</span>-->
+                        <!--</div>-->
+                    <!--</li><br>-->
+                    <!--<li>-->
+                        <!--<div   id="adminGraph2" onclick="displayUsersOnline()" class="Anchor" style=" text-decoration: none;">-->
+                            <!--<i class="fa fa-4x  fa-users " ></i>-->
+                            <!--<br> Users Online</span>-->
+                        <!--</div>-->
+                    <!--</li><br>-->
+                    <!--<li>-->
+                        <!--<div   id="adminGraph3" onclick="displayPostsMonthly()" class="Anchor" style=" text-decoration: none;">-->
+                            <!--<i class="fa fa-4x fa-bar-chart"></i>-->
+                            <!--<br>Posts Analysis</span>-->
+                            <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
     <!--sidebar end-->
 
 
     <!--newsfeed-->
-    <div class="col-md-10 marleft2 marright2 mar50 newclass">
+    <div class="col-md-8 marleft2 marright2 mar50 newclass">
         <div id="containerAnalysis">
             <div class="row">
                 <div class="col-sm-6" style="border:1px solid black">

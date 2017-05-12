@@ -159,4 +159,10 @@ myApp.controller("AdminCtrl", function($scope,$http,$window) {
         window.location.assign("/index");
     }
 
+
+    $scope.profile=function() {
+        window.location.assign("/profileCompletion");
+    }
+
+
 });

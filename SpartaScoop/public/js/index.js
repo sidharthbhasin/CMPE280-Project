@@ -16,7 +16,7 @@ function valemail(tag, email) {
 		tag.style = "opacity:0.5;background:#ff7c75;border-style:solid;border-width:1px;border-color:red;";
 	}
 	else{
-		tag.style = "background:#5aa982;border-style:none;";
+		tag.style = "background:white;border-style:none;";
 	}
 }
 
@@ -26,7 +26,7 @@ function validate(tag){
 		console.log('invalid');
 	}
 	else{
-		tag.style = "background:#5aa982;border-style:none;";
+		tag.style = "background:white;border-style:none;";
 	}
 }	
 
